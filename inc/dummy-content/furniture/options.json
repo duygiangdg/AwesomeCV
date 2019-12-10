@@ -1,0 +1,10 @@
+{
+	"menu_align": "center",
+	"primary-color": "#2F8653",
+	"top-bar-bg":{
+	  "background-color":"#2F8653"
+	},
+	"right_column_width": "200",
+	"header_full_width": "0",
+	"header": "categories"
+}

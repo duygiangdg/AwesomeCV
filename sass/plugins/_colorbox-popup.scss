@@ -1,0 +1,62 @@
+// --------------------------------------------------------------------------------------------
+// COLORBOX POPUP
+// --------------------------------------------------------------------------------------------
+
+#cboxContent {
+	background-color: transparent;
+}
+
+#cboxMiddleLeft,
+#cboxMiddleRight,
+#cboxTopLeft,
+#cboxTopCenter,
+#cboxTopRight,
+#cboxBottomLeft,
+#cboxBottomCenter,
+#cboxBottomRight {
+	display: none;
+}
+
+#cboxClose {
+	bottom: -50px;
+	padding-right: 50px;
+	width: auto;
+	height: auto;
+	background: none;
+	color: white;
+	text-indent: 0;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	font-weight: bold;
+	font-size: 32px;
+	line-height: 33px;
+	-webkit-transition: color .2s ease-in-out;
+	transition: color .2s ease-in-out;
+
+	&:after,
+	&:before {
+		content: " ";
+		position: absolute;
+		top: 15px;
+		right: 0px;
+		display: inline-block;
+		width: 35px;
+		height: 3px;
+		background-color: white;
+		-webkit-transition: background-color .2s ease-in-out, transform .2s ease-in-out;
+		transition: background-color .2s ease-in-out, transform .2s ease-in-out;
+	}
+
+	&:hover {
+
+		&:after {
+			-webkit-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+		}
+
+		&:before {
+			-webkit-transform: rotate(45deg);
+			transform: rotate(45deg);
+		}
+	}
+}

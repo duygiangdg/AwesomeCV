@@ -1,0 +1,191 @@
+
+// --------------------------------------------------------------------------------------------
+// SIDE-BAR 
+// --------------------------------------------------------------------------------------------
+
+.sidebar-container {
+	margin-bottom: 40px;
+	color: rgba(0, 0, 0, 0.8);
+}
+
+.filters-area {
+	display: none;
+	margin-bottom: 35px;
+	color: rgba(0, 0, 0, 0.8);
+	background-color: #F9F9F9;
+	padding-top: 30px;
+	padding-left: 30px;
+	padding-right: 30px;
+
+	.body-filters-opened &,
+	&.always-open {
+		display:block;
+	}
+
+	&.custom-content {
+		padding-bottom: 30px;
+	}
+}
+
+.filters-inner-area {
+
+	> div {
+
+		&:nth-of-type(4n+1) {
+			clear: both;
+		}
+	}
+}
+
+.sidebar-widget:not(:last-child) {
+	margin-bottom:50px;
+}
+
+.filter-widget {
+	margin-bottom:30px;
+}
+
+.sidebar-widget,
+.filter-widget {
+
+	p {
+		color: rgba(0, 0, 0, 0.8);
+	}
+	
+	li {
+		margin-bottom: 15px;
+		color: rgba(0, 0, 0, 0.8);
+
+		a {
+			color: rgba(0, 0, 0, 0.9);
+
+			&:hover {
+				color: $primary-color;
+			}
+		}
+
+		> ul {
+
+			li {
+				 color: rgba(0, 0, 0, 0.6);
+
+				a {
+					 color: rgba(0, 0, 0, 0.6);
+
+					&:hover {
+						color: $primary-color;
+					}
+				}
+			}
+		}
+
+		&:last-child {
+			margin-bottom: 0px;
+		} 
+	}
+} 
+
+// ------------------------------------------
+// SHIDEBAR BUTTON ON MOBILE DEVICE
+// ------------------------------------------
+
+.basel-sticky-sidebar-opener {
+
+	&:not(.sticky-toolbar) {
+		position: fixed;
+		display:none;
+		top: 30%;
+		left: 0;
+		width: 50px;
+		height: 50px;
+		text-align: center;
+		z-index: 350;
+		font-size: 0;
+		border-top-right-radius: 35px;
+		border-bottom-right-radius: 35px;
+		border-top-width: 1px;
+		border-right-width: 1px;
+		border-bottom-width: 1px;
+		border-left-width: 0;
+		border-style: solid;
+		border-color: black;
+		background-color: white;
+	
+		transition: 0.2s all ease;
+		-webkit-transition: 0.2s all ease;
+
+		&:hover,
+		&:focus {
+			text-decoration:none;
+			background: $primary-color;
+			border-color:$primary-color;
+			fill: white;
+	
+			svg {
+				fill: white;
+			}
+			
+			&:not(.shop-sidebar-opener) {
+	
+				&:after {
+					color: white;
+				}
+			}
+		}
+	}
+	
+	svg {
+		fill: black;
+		width: 18px;
+		height: 50px;
+		margin-left: -5px;
+		transition: 0.2s all ease;
+		-moz-transition: 0.2s all ease;
+		-webkit-transition: 0.2s all ease;
+	}
+	
+	&:not(.shop-sidebar-opener) {
+
+		&:after {
+			content: "\e603";
+			display: inline-block;
+			font-family: "simple-line-icons";
+			font-size: 20px;
+			line-height: 48px;
+			margin-left: -4px;
+		}
+	}
+}
+
+.shop-sidebar-opener {
+
+	&:not(.sticky-toolbar) {
+		opacity: 0;
+		pointer-events: none;
+		-webkit-transform:translateX(-100%);
+		transform:translateX(-100%);
+		backface-visibility: hidden;
+	}
+}
+
+.basel-sidebar-btn-shown {
+
+	&:not(.sticky-toolbar) {
+		pointer-events: visible;
+		pointer-events: unset;
+		opacity: 1;
+		transform:none;
+		-webkit-transform:none;
+	}
+}
+
+aside.sidebar-container {
+
+	&.show-hidden-sidebar {
+		pointer-events: visible;
+		pointer-events: unset;
+		opacity: 1;
+		transform:none;
+		-webkit-transform:none;
+	}
+}

@@ -1,0 +1,34 @@
+{
+	"top-bar-bg" : {
+		"background-color" : "#5abbed"
+	},
+	"header" : "simple",
+	"menu_align" : "center",
+	"primary-color" : "#5abbed",
+	"header-border" : false,
+	"shopping_cart" : 2,
+	"shopping_icon_alt" : false,
+	"header_search" : "full-screen",
+	"cart_position" : "side",
+	"text-font" : {
+		"font-family" : "Open Sans",
+		"google" : true
+	},
+	"primary-font" : {
+		"font-family" : "Poppins",
+		"google" : true,
+		"font-weight" : 700,
+		"color" : "#212121"
+	},
+	"post-titles-font" : {
+		"font-family" : "Poppins",
+		"google" : true,
+		"font-weight" : 600
+	},
+	"navigation-font" : {
+		"font-family" : "Lato",
+		"google" : true,
+		"font-size" : "13px",
+		"font-weight" : 700
+	}
+}

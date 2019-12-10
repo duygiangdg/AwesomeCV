@@ -1,0 +1,38 @@
+{
+	"top-bar": false,
+	"header_full_width": false,
+	"sricky_footer": false,
+	"header": "logo-center",
+	"primary-color": "#b57b00",
+	"header_area": "[html_block id=\"749\"]",
+	"menu_align": "center",
+	"text-font": {
+		"font-family": "Roboto",
+		"google": true
+	},
+	"primary-font": {
+		"font-family": "Playfair Display",
+		"google": true,
+		"font-weight": 600
+	},
+	"post-titles-font": {
+		"font-family": "Playfair Display",
+		"google": true,
+		"font-weight": 600
+	},
+	"secondary-font": {
+		"font-family": "Tangerine",
+		"google": true
+	},
+	"widget-titles-font": {
+		"font-family": "Playfair Display",
+		"google": true,
+		"font-weight": 600
+	},
+	"navigation-font": {
+		"font-family": "Roboto",
+		"google": true,
+		"font-weight": 600,
+		"font-size": "13px"
+	}
+}

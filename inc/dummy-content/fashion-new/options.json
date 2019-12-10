@@ -1,0 +1,42 @@
+{
+	"top-bar": false,
+	"header_full_width" : true,
+	"header" : "shop",
+	"menu_align" : "left",
+	"primary-color" : "#fdab52",
+	"header-border" : false,
+	"header-overlap": false,
+	"shopping_cart" : 2,
+	"shopping_icon_alt" : false,
+	"header_search" : "full-screen",
+	"cart_position" : "side",
+	"products_hover" : "quick",
+	"sticky_footer" : true,
+	"header_banner" : true,
+	"header_banner_link" : "#",
+	"header_banner_shortcode" : "<p style=\"text-align: center; color: white;\">Spring discount on fashion clothing from popular brands up to 30%</p>",
+	"header_banner_height" : 35,
+	"header_banner_mobile_height" : 50,
+	"header_banner_color" : "light",
+	"header_banner_bg" : {
+		"background-color" : "#f05f30"
+	},
+	"header_close_btn" : true,
+	"text-font" : {
+		"font-family" : "Cabin",
+		"google" : true,
+		"font-weight" : 400
+	},
+	"primary-font" : {
+		"font-family" : "Cabin",
+		"google" : true,
+		"font-weight" : 600,
+		"color" : "#333333"
+	},
+	"post-titles-font" : {
+		"font-family" : "Cabin",
+		"google" : true,
+		"font-weight" : 700,
+		"color" : "#333333"
+	}
+}

@@ -1,0 +1,45 @@
+{
+	"top-bar": false,
+	"header_full_width": true,
+	"header": "shop",
+	"site_width": "full-width",
+	"sticky_footer": false,
+	"dark_version": true,
+	"header_color_scheme": "light",
+	"primary-color": "#a62626",
+	"right_column_width": 230,
+	"body-background": {
+		"background-color": "#000000"
+	},
+	"footer-bar-bg" :{
+		"background-image" : "http://dummy.xtemos.com/basel/vers/wp-content/uploads/sites/3/2017/01/dummy-games-footer-bg.jpg",
+		"background-size" : "cover"
+	},
+	"text-font": {
+		"font-family": "Open Sans",
+		"google": true
+	},
+	"primary-font": {
+		"font-family": "Lato",
+		"google": true,
+		"font-weight": 900
+	},
+	"post-titles-font": {
+		"font-family": "Lato",
+		"google": true,
+		"font-weight": 900
+	},
+	"secondary-font": {
+		"font-family": "Oswald",
+		"google": true
+	},
+	"widget-titles-font": {
+		"font-family": "Lato",
+		"google": true
+	},
+	"navigation-font": {
+		"font-family": "Lato",
+		"google": true,
+		"font-weight": 700
+	}
+}

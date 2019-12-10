@@ -1,0 +1,95 @@
+
+// --------------------------------------------------------------------------------------------
+// THANK YOU PAGE
+// --------------------------------------------------------------------------------------------
+
+.woocommerce-order-received {
+
+	.site-content {
+
+		.entry-content {
+
+			> .woocommerce {
+				max-width: 800px;
+				margin: 0 auto;
+			}
+		}
+	}
+	
+	.responsive-table {
+		margin-bottom:60px;
+	}
+
+	.woocommerce {
+
+		.woocommerce-thankyou-order-received {
+			background: transparent;
+			border: 2px dashed #7a9c59;
+			color: #7a9c59;
+			font-weight: 600;
+			width:100%;
+			text-align:center;
+			font-size:16px;
+			margin-bottom:30px;
+			// line-height: 1.4;
+			padding: 15px 25px;
+		}
+	}
+
+	ul.order_details {
+		margin-left:0;
+	}
+
+	.order-again {
+		margin-top: -40px;
+		margin-bottom: 60px;
+	}
+}
+
+.woocommerce-order-details {
+
+	> p {
+		text-align: center;
+
+		> a {
+			margin-left: 5px;
+			margin-right: 5px;
+		}
+	}
+}
+
+.woocommerce-order-details__title,
+.wc-bacs-bank-details-heading {
+	text-transform: uppercase;
+	font-weight: 600;
+	margin-bottom: 5px;
+	text-align: center;
+
+	+ h3 {
+		font-size: 16px;
+		opacity: 0.8;
+		margin-bottom: 30px;
+		text-align: center;
+	}
+}
+
+.woocommerce-customer-details {
+
+	> h2,
+	> h3 {
+		text-transform: uppercase;
+		font-weight: 600;
+		text-align: center;
+	}
+
+	address {
+		padding: 30px;
+		border: 2px dashed #d5d5d5;
+	}
+}
+
+.woocommerce-customer-details--phone,
+.woocommerce-customer-details--email {
+	margin-bottom: 0;
+	// line-height: 1.8;
+}

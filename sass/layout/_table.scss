@@ -1,0 +1,74 @@
+
+// --------------------------------------------------------------------------------------------
+// TABLE
+// --------------------------------------------------------------------------------------------
+
+.table-bordered-style {
+
+	th,
+	td {
+		border: 1px solid #EFEFEF;
+	}
+}
+
+table {
+	width: 100%;
+	margin-bottom: 50px;
+	font-size: 14px;
+
+	a {
+		color: #2f2f2f;
+	}
+		
+	tr {
+			
+		th {
+			padding: 15px 10px;
+			text-align: center;
+			letter-spacing: 1px;
+			font-size: 18px;
+    		font-weight: 600;
+			text-transform:uppercase;
+			line-height: 1.4;
+			color: #1B1919;
+			vertical-align: middle;
+			border: none;
+			border-bottom: 2px solid #EFEFEF;
+		}
+
+		td {
+			padding: 15px 12px;
+			border: none;
+			text-align: center;
+			border-bottom: 1px solid #E6E6E6;
+		}
+	}
+
+	tbody,
+	tfoot {
+
+		th {
+			border-bottom: 1px solid #E6E6E6;
+			text-transform:none;
+		}
+	}	
+}
+
+//------------------------------------------
+// RESPONSIVE TABLE
+// ------------------------------------------
+
+.responsive-table {
+ 	overflow-x: auto;
+ 	margin-bottom:30px;
+
+	table {
+	  	margin:0;
+	}
+
+	.responsive-table {
+		margin-bottom:0px;
+		overflow-x: visible;
+	}
+}
+

@@ -1,0 +1,27 @@
+{
+	"site_width": "wide",
+	"primary-color": "#8c4a00",
+	"header": "vertical",
+	"top-bar": false,
+	"header_area": "[social_buttons style=\"colored\" size=\"small\" type=\"follow\"]",
+	"social_email": "",
+	"pinterest_link": "",
+	"products_hover": "quick",
+	"text-font": {
+		"font-family": "Open Sans",
+		"google": true
+	},
+	"primary-font": {
+		"font-family": "Oswald",
+		"google": true
+	},
+	"post-titles-font": {
+		"font-family": "Oswald",
+		"google": true
+	},
+	"navigation-font": {
+		"font-family": "Oswald",
+		"google": true,
+		"font-size": "14px"
+	}
+}

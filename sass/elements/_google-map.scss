@@ -1,0 +1,45 @@
+
+// --------------------------------------------------------------------------------------------
+// GOOGLE MAPS 
+// --------------------------------------------------------------------------------------------
+
+.google-map-container {
+	position:relative;
+
+	&.google-map-container-with-content {
+
+		.basel-google-map-wrapper {
+			position:absolute; 
+			width:100%;
+			height: 100%;
+
+			.basel-google-map {
+				width:100%;
+			}
+		}
+	}
+
+	.gm-style-iw {
+		text-align: center;
+	}
+}
+
+.map-mask-dark {
+  	background-color: black;
+
+	.basel-google-map-wrapper {
+		opacity:0.6;
+	}
+}
+
+.map-mask-light {
+    background-color: white;
+
+    .basel-google-map-wrapper {
+		opacity:0.7;
+    }
+}
+
+.google-map-container img {
+	max-width: none;
+}

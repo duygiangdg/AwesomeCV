@@ -1,0 +1,10 @@
+{
+	"menu_align": "center",
+	"header": "simple",
+	"primary-color": "#d93939",
+	"top-bar-bg":{
+	  "background-color":"#d93939"
+	},
+	"right_column_width": "200",
+	"header_full_width": "0"
+}

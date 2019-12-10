@@ -1,0 +1,990 @@
+
+// ------------------------------------------------------------------------------------------------
+// MIXIN
+// ------------------------------------------------------------------------------------------------ 
+
+//------------------------------------------
+// CLEARFIX
+// -----------------------------------------
+
+@mixin clear-element {
+    &:after {
+      content:"";
+      clear:both;
+      display:block;
+    }
+}
+
+//------------------------------------------
+// BLACK COLOR SCHEME
+// -----------------------------------------
+
+@mixin black-background {
+    color:rgba(255,255,255,0.8);
+
+    a {
+        color:rgba(255,255,255,0.9);
+
+        &:hover {
+            color:rgba(255,255,255,1);
+        }
+
+        &:focus {
+            color:rgba(255,255,255,1);
+        }
+    }
+    
+    p {
+        color:rgba(255,255,255,0.8);
+    }
+
+    h1,h2,h3,h4,h5,h6,  
+    .widgettitle,
+    .widget-title,
+    label {
+        color:rgba(255,255,255,1);
+    }
+
+    ul {
+
+        li {
+            color:rgba(255,255,255,0.8);
+
+            a {
+                color:rgba(255,255,255,0.9);
+
+                &:hover {
+                    color:rgba(255,255,255,1);
+                }
+
+                &:focus {
+                    color:rgba(255,255,255,1);
+                }
+            }
+        }
+    }
+}
+
+@mixin white-background {
+    color:rgba(0,0,0,0.7);
+
+    a {
+        color:rgba(0,0,0,0.8);
+
+        &:hover {
+            color:rgba(0,0,0,1);
+        }
+
+        &:focus {
+            color:rgba(0,0,0,1);
+        }
+    }
+    
+    p {
+        color:rgba(0,0,0,0.7);
+    }
+
+    h1,h2,h3,h4,h5,h6,
+    .widgettitle,
+    .widget-title,
+    label {
+        color:rgba(0,0,0,1);
+    }
+
+    ul {
+    
+        li {
+            color:rgba(0,0,0,0.8);
+
+            a {
+                color:rgba(0,0,0,0.8);
+                
+                &:hover {
+                    color:rgba(0,0,0,1);
+                }
+
+                &:focus {
+                    color:rgba(0,0,0,1);
+                }
+            }
+        }
+    }
+}
+
+//------------------------------------------
+// LOADER
+// -----------------------------------------
+
+@mixin loader($size:18px, $b-width:1px, $color:rgb(0,0,0)) {
+    content: " ";
+    width: $size;
+    height: $size;
+    display: inline-block;
+    vertical-align: middle;
+    border: $b-width solid $color;
+    border-radius: 50%;
+    border-left-color: transparent!important;
+    border-right-color: transparent!important;
+}
+
+@mixin act-loader {
+    -webkit-animation: load-spin 450ms infinite linear;
+    animation: load-spin 450ms infinite linear;
+}
+
+
+
+//------------------------------------------
+// SHADOW BOX 
+// -----------------------------------------
+
+@mixin shadow-drop-element {
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+}
+
+//------------------------------------------
+// BORDER LINK
+// -----------------------------------------
+
+@mixin border-link($color-border:#E6E6E6, $color-hover:#A6A6A6) {
+    background-color:transparent;
+    padding-bottom:1px;
+    padding-right:0;
+    padding-left:0;
+    padding-top:0;
+    border:none;
+    border-bottom:1px solid $color-border;
+    display: inline;
+
+    &:hover {
+        text-decoration:none;
+        border-color:$color-hover;
+        background-color:transparent;
+    }
+
+    &:focus {
+        border-color:$color-hover;
+        background-color:transparent;
+    }
+}
+
+//------------------------------------------
+// LINK SCALE
+// -----------------------------------------
+
+@mixin scale-link($width-border:1px, $color-border:#919191) {
+
+    a {
+        padding-top:1px;
+        padding-bottom:1px;
+        position: relative;
+
+        &:after {
+            content:" ";
+            position: absolute;
+            right:0;
+            bottom:0;
+            width: 0;
+            height: $width-border;
+            background-color: $color-border;
+            transition: width 0.2s ease;
+        }
+
+        &:hover {
+                        
+            text-decoration: none;
+
+            &:after {
+                width: 100%;
+                left:0;
+            }
+        }
+
+        .color-scheme-light & {
+
+            &:after {
+                background-color:white;
+            }
+        }
+    }
+}
+
+//------------------------------------------
+// CLOSE BATTON
+// -----------------------------------------
+
+@mixin close-btn($position:right, $height:2px, $width:20px, $color: black) {
+    cursor:pointer;
+    padding-#{$position}:$width + 6px;
+
+    &:after,
+    &:before {
+        content: " ";
+        position:absolute;
+        #{$position}:0px;
+        top: 50%;
+        margin-top:-$height / 2;
+        width: $width;
+        height: $height;
+        display: inline-block;
+        background-color: $color;
+        -webkit-transition:background-color 0.2s ease-in-out, transform 0.2s ease-in-out, width 0.2s ease-in-out;
+        -moz-transition:background-color 0.2s ease-in-out, transform 0.2s ease-in-out, width 0.2s ease-in-out;
+        -o-transition:background-color 0.2s ease-in-out, transform 0.2s ease-in-out, width 0.2s ease-in-out;
+        transition:background-color 0.2s ease-in-out, transform 0.2s ease-in-out, width 0.2s ease-in-out;
+    }
+}
+
+@mixin close-btn-rotate($a:0deg, $b:0deg, $h-a:-45deg, $h-b:45deg) {
+
+    &:after {
+        transform:rotate($a);
+        -webkit-transform:rotate($a);
+        -moz-transform:rotate($a);
+        -o-transform:rotate($a);
+        -ms-transform:rotate($a);
+        -sand-transform:rotate($a);
+    }
+
+    &:before {
+        -webkit-transform:rotate($b);
+        -moz-transform:rotate($b);
+        -o-transform:rotate($b);
+        -ms-transform:rotate($b);
+        -sand-transform:rotate($b);
+        transform:rotate($b);
+    }
+
+    &:hover {
+
+        &:after {
+            transform:rotate($h-a);
+            -webkit-transform:rotate($h-a);
+            -moz-transform:rotate($h-a);
+            -o-transform:rotate($h-a);
+            -ms-transform:rotate($h-a);
+            -sand-transform:rotate($h-a);
+        }
+
+        &:before {
+            -webkit-transform:rotate($h-b);
+            -moz-transform:rotate($h-b);
+            -o-transform:rotate($h-b);
+            -ms-transform:rotate($h-b);
+            -sand-transform:rotate($h-b);
+            transform:rotate($h-b);
+        }
+    }
+}
+
+//------------------------------------------
+// SOCIAL ICON
+// -----------------------------------------
+
+// add social icon
+
+@mixin social-icons($bg-color:#efefef, $color:#8f8f8f, $hover-bg:#000000, $hover-color:#ffffff) {
+
+    li {
+        width: 40px;
+        height: 40px;
+        background-color: $bg-color;
+        border-radius: 50%;
+        text-align:center;
+        -webkit-transition:all 0.2s ease-in-out;
+        -moz-transition:all 0.2s ease-in-out;
+        -o-transition:all 0.2s ease-in-out;
+        transition:all 0.2s ease-in-out;
+
+        a {
+            position:relative;
+            color: $color;
+            width: 100%;
+            display: inline-block; 
+        }
+
+        i {
+            line-height:40px;
+        } 
+
+        &:hover {
+            background-color: $hover-bg;
+
+            a {
+                color: $hover-color;
+            }
+        }
+    }
+}
+
+// different bg colors on hover
+
+@mixin social-icons-hover-color($bg-color:#efefef, $color:#8f8f8f, $hover-color: #ffffff) {
+
+    li {
+        background-color: $bg-color;
+
+        &.social-facebook {
+
+            &:hover {
+                background-color: #365493;
+            }
+        }
+            
+        &.social-twitter {
+
+             &:hover {
+                background-color: #3CF;
+            }
+        }
+
+        &.social-instagram {
+
+            &:hover {
+                background-color:#774430;
+            }
+        }
+
+        &.social-email {
+
+            &:hover {
+                background-color: #F89A1E;
+            }
+        }
+
+        &.social-pinterest {
+
+            &:hover {
+                background-color: #CB2027;
+            }
+        }
+
+        &.social-youtube {
+
+            &:hover {
+                background-color: #c32f2b;
+            }
+        }
+
+        &.social-tumblr {
+            
+            &:hover {
+                background-color: #36465d;
+            }
+        }
+
+        &.social-linkedin {
+            
+            &:hover {
+                background-color: #0274b3;
+            }
+        }
+
+        &.social-vimeo {
+            
+            &:hover {
+                background-color: #1ab7ea;
+            }
+        }
+
+        &.social-flickr {
+            
+            &:hover {
+                background-color: #fe0072;
+            }
+        }
+
+        &.social-github {
+            
+            &:hover {
+                background-color: #171515;
+            }
+        }
+
+        &.social-dribbble {
+            
+            &:hover {
+                background-color: #b2215a;
+            }
+        }
+
+        &.social-behance {
+            
+            &:hover {
+                background-color: #1f6ffc;
+            }
+        }
+
+        &.social-soundcloud {
+            
+            &:hover {
+                background-color: #f9490d;
+            }
+        }
+
+        &.social-spotify {
+            
+            &:hover {
+                background-color: #2ebd59;
+            }
+        }
+
+        &.social-skype {
+
+            &:hover {
+                background-color: #00aff0;
+            }
+        }
+
+        &.social-ok {
+
+            &:hover {
+                background-color: #EE8208;
+            }
+        }
+
+        &.social-whatsapp {
+
+            &:hover {
+                background-color: #1EBEA5;
+            }
+        }
+
+        &.social-vk {
+
+            &:hover {
+                background-color: #4c75a3;
+            }
+        }
+
+        &.social-snapchat {
+
+            &:hover {
+                background-color: #fffc00;
+            }   
+        }
+
+        &.social-tg {
+
+            &:hover {
+                background-color: #37aee2;
+            }   
+        }
+
+        a {
+            color: $color; 
+        }
+
+        &:hover {
+
+            a {
+                color: $hover-color;
+            }
+        }
+    }
+}
+
+// different bg colors
+
+@mixin social-icons-active-color($bg-color:#efefef, $color:#ffffff, $hover-color: #ffffff, $sa: red) {
+
+    li {
+        background-color: $bg-color;
+
+        &.social-facebook {
+            background-color: #365493;
+        }
+            
+        &.social-twitter {
+            background-color: #3CF;
+        }
+
+        &.social-instagram {
+            background-color:#774430;
+        }
+
+        &.social-email {
+            background-color: #F89A1E;
+        }
+
+        &.social-pinterest {
+            background-color: #CB2027;
+        }
+
+        &.social-youtube {
+            background-color: #c32f2b;
+        }
+
+        &.social-tumblr {
+            background-color: #36465d;
+        }
+
+        &.social-linkedin {
+            background-color: #0274b3;
+        }
+
+        &.social-vimeo {
+            background-color: #1ab7ea;
+        }
+
+        &.social-flickr {
+            background-color: #fe0072;
+        }
+
+        &.social-github {
+            background-color: #171515;
+        }
+
+        &.social-dribbble {
+            background-color: #b2215a;
+        }
+
+        &.social-behance {
+            background-color: #1f6ffc;
+        }
+
+        &.social-soundcloud {
+            background-color: #f9490d;
+        }
+
+        &.social-spotify {
+            background-color: #2ebd59;
+        }
+
+        &.social-skype {
+            background-color: #00aff0;
+        }
+
+        &.social-ok {
+
+            background-color: #EE8208;
+        }
+
+        &.social-whatsapp {
+
+            background-color: #1EBEA5;
+        }
+
+        &.social-vk {
+            background-color: #4c75a3;
+        }
+
+        &.social-snapchat {
+            background-color: #fffc00;
+        }
+
+        &.social-tg {
+            background-color: #37aee2;
+        }
+
+        a {
+            color: $color; 
+        }
+
+        &:hover {
+            opacity: 0.8;
+
+            a {
+                color: $hover-color;
+            }
+        }
+    }
+}
+
+//------------------------------------------
+// TOOLTIP MIXIN
+// -----------------------------------------
+
+///****  add tooltip ****///
+
+@mixin add-tooltip {
+    text-align:center;
+      position: relative;
+
+    .basel-tooltip-label {
+        position: absolute;
+        padding: 0 10px;
+        line-height: 28px;
+        font-size: 12px;
+        letter-spacing: .3px;
+        visibility: hidden;
+        white-space: nowrap;
+        color: transparent;
+        background-color: transparent;
+
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+    }
+}
+
+///****  add icon ****///
+
+@mixin tooltip-icon($top: 100%, $right: auto, $bottom: auto, $left: 50%, $translateX:-50%, $translateY:0, $content:"\f0d7"){
+
+    .basel-tooltip-label {
+
+        &:before {
+            content:$content;
+            position: absolute;
+            top: $top;
+            bottom:$bottom;
+            left: $left;
+            right:$right;
+            color: transparent;
+            font-size: 16px;
+            font-family: "FontAwesome";
+            line-height: 5px;
+            -webkit-transform: translateX($translateX) translateY($translateY);
+            -o-transform: translateX($translateX) translateY($translateY);
+            -ms-transform: translateX($translateX) translateY($translateY);
+            -sand-transform: translateX($translateX) translateY($translateY);
+            -moz-transform: translateX($translateX) translateY($translateY);
+            transform: translateX($translateX) translateY($translateY);
+
+            -webkit-transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
+            -ms-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+        }
+    }
+}
+
+///****  position tooltip ****///
+
+@mixin tooltip-position($top: auto, $right: auto, $bottom: 130%, $left: 50%, $translateX:-50%, $translateY: 0){
+    .basel-tooltip-label {
+        bottom:$bottom;
+        left: $left;
+        right:$right;
+        top: $top;
+
+        -webkit-transform: translateX($translateX) translateY($translateY);
+        -o-transform: translateX($translateX) translateY($translateY);
+        -ms-transform: translateX($translateX) translateY($translateY);
+        -sand-transform: translateX($translateX) translateY($translateY);
+        -moz-transform: translateX($translateX) translateY($translateY);
+        transform: translateX($translateX) translateY($translateY);
+    }
+}
+
+///****  hover tooltip ****///
+
+@mixin tooltip-hover($top: auto, $right: auto, $bottom: 115%, $left: 50% ){
+    &:hover .basel-tooltip-label {
+        background-color:black;
+        color: white;
+        visibility: visible;
+        top:$top;
+        bottom: $bottom;
+        left: $left;
+        right: $right;
+
+        &:before {
+            color:black;
+        }
+    }
+}
+
+//------------------------------------------
+// BURGER
+// -----------------------------------------
+
+@mixin burger($width: 18px, $height: 2px, $gutter: 2px, $color: #000) {
+    position: relative;
+    margin-top: $height + $gutter;
+    margin-bottom: $height + $gutter;
+
+    &, &::before, &::after {
+        display: inline-block;
+        width: $width;
+        height: $height;
+        background-color: $color;
+        -webkit-transition:all 0.25s ease-in-out;
+        -moz-transition:all 0.25s ease-in-out;
+        -o-transition:all 0.25s ease-in-out;
+        transition:all 0.25s ease-in-out;
+    }
+
+    &::before, &::after {
+        position: absolute;
+        content: "";
+        left: 0;
+    }
+
+    &::before {
+        top: -6px;
+    }
+
+    &::after {
+        top: 6px;
+    }
+}
+
+//------------------------------------------
+// COLOR BUTTONS
+// -----------------------------------------
+
+///****  primary color buttons ****///
+
+@mixin btn-color-primary {
+    background-color: $primary-color;
+    color: #ffffff;
+    border-color: $primary-color;
+
+    &:hover,
+    &:focus {
+        background-color: $primary-color;
+        border-color: $primary-color;
+        opacity:0.8;
+        color:#ffffff;
+        text-decoration: none;
+    }
+
+    //**  border color  **//
+
+    &.btn-style-bordered {
+        background-color: transparent;
+        color:$primary-color;
+
+        &:hover,
+        &:focus {
+            background-color: $primary-color;
+            color: #ffffff;
+            opacity:1;
+        }
+    }
+
+    //**  link color  **//
+
+    &.btn-style-link {
+        background-color: transparent;
+        color:rgba(0, 0, 0, 1);
+        opacity:0.5;
+
+        &:hover,
+        &:focus {
+            background-color: transparent;
+            color:rgba(0, 0, 0, 1);
+            opacity:0.8;
+        }
+    }
+}
+
+///****  alternative color buttons ****///
+
+@mixin btn-color-alternative {
+    background-color:$alternative-color;
+    color: #ffffff;
+    border-color: $alternative-color;
+
+    &:hover,
+    &:focus {
+        background-color:$alternative-color;
+        border-color: $alternative-color;
+        color:#ffffff;
+        opacity:0.8;
+        text-decoration: none;
+    }
+
+    //**  border color  **//
+
+    &.btn-style-bordered {
+        background-color: transparent;
+        color:$alternative-color;
+
+        &:hover,
+        &:focus {
+            background-color: $alternative-color;
+            color: #ffffff;
+            opacity:1;
+        }
+    }
+
+    //**  link color  **//
+
+    &.btn-style-link {
+        background-color: transparent;
+        color:rgba(0, 0, 0, 1);
+        opacity:0.5;
+
+        &:hover,
+        &:focus {
+            background-color: transparent;
+            color:rgba(0, 0, 0, 1);
+            opacity:0.8;
+        }
+    }
+}
+
+///****  black color buttons ****///
+
+@mixin btn-color-black {
+    background-color: #000000;
+    color: #ffffff;
+    border-color: #000000;
+
+    &:hover,
+    &:focus {
+        background-color: lighten(#000000, 20%);
+        color: #ffffff;
+        text-decoration: none;
+        border-color:lighten(#000000, 20%);
+    }
+
+    //**  border color  **//
+
+    &.btn-style-bordered {
+        background-color: transparent;
+        color:#000000;
+
+        &:hover,
+        &:focus {
+            background-color: #000000;
+            color: #ffffff;
+            border-color: #000000;
+        }
+    }
+
+    //**  link color  **//
+
+    &.btn-style-link {
+        background-color: transparent;
+        color: rgba(0,0,0,1);
+        opacity:1;
+
+        &:hover,
+        &:focus {
+            background-color: transparent;
+            color: rgba(0,0,0,1);
+            opacity:0.7;
+        }
+    }
+}
+
+///****  default color buttons ****///
+
+@mixin btn-color-default {
+    background-color:#ECECEC;
+    color:#3E3E3E;
+    border-color:#ECECEC;
+
+    &:hover,
+    &:focus {
+        background-color:#3E3E3E;
+        color:white;
+        text-decoration: none;
+        border-color:#3E3E3E;
+    }
+
+    //**  border color  **//
+
+    &.btn-style-bordered {
+        background-color: transparent;
+        color: #6D6D6D;
+        border-color:#B5B5B5;
+
+        &:hover,
+        &:focus {
+            background-color:#3E3E3E;
+            color:white;
+            border-color:#3E3E3E;
+        }
+    }
+
+    //**  link color  **//
+
+    &.btn-style-link {
+        background-color: transparent;
+        color: #6D6D6D;
+        border-color:#B5B5B5;
+
+        &:hover,
+        &:focus {
+            background-color: transparent;
+            color:#3E3E3E;
+            border-color:#3E3E3E;
+        }
+    }
+}
+
+///****  white color buttons ****///
+
+@mixin btn-color-white {
+    background-color: #ffffff;
+    color: #3b3b3b;
+    border-color: #ffffff;
+
+    &:hover,
+    &:focus {
+        background-color:#3E3E3E;
+        color:#ffffff;
+        text-decoration: none;
+        border-color:#3E3E3E;
+    }
+
+    //**  border color  **//
+
+    &.btn-style-bordered {
+        background-color: transparent;
+        color:#ffffff;
+
+        &:hover,
+        &:focus {
+            background-color:#ffffff;
+            color:#5F5F5F;
+            border-color: #ffffff;
+        }
+    }
+
+    //**  link color  **//
+
+    &.btn-style-link {
+        background-color: transparent;
+        color: #ffffff;
+        border-color:rgba(255,255,255,0.6);
+
+        &:hover,
+        &:focus {
+            background-color: transparent;
+            color:#ffffff;
+            border-color: #ffffff;
+        }
+    }
+}
+
+//------------------------------------------
+// STYLE BUTTONS
+// -----------------------------------------
+
+///****  border-button ****///
+
+@mixin border-button {
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+}
+
+///****  link buttons ****///
+
+@mixin link-button {
+    padding:0;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    text-transform: capitalize;
+}
+
+///****  round button ****///
+
+@mixin round-button {
+    border-radius: 35px;
+}
+
+

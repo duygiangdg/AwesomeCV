@@ -1,0 +1,36 @@
+
+// --------------------------------------------------------------------------------------------
+// AUTHOR AREA
+// --------------------------------------------------------------------------------------------
+
+.author-area {
+	margin-bottom: 20px;
+
+	p {
+		margin-bottom: 10px;
+	}
+
+	.author-avatar {
+		margin-bottom: 20px;
+
+		img {
+			display: inline-block;
+			border-radius: 50%;
+		}
+	}
+
+	.author-info {
+		margin-bottom: 0;
+		padding-left: 0;
+		font-size: 15px;
+	}
+
+	> a {
+		display: inline-block;
+		margin-top: 20px;
+		color: #8C8C8C;
+		font-size: 14px;
+
+		@include border-link;
+	}
+}

@@ -1,0 +1,792 @@
+
+// --------------------------------------------------------------------------------------------
+// PORTFOLIO
+// --------------------------------------------------------------------------------------------
+
+// ------------------------------------------
+// PORTFOLIO FILTER 
+// ------------------------------------------ 
+
+.page-portfolio {
+	margin-top: -40px;
+}
+
+.tax-project-cat {
+
+	.page-portfolio {
+		margin-top: 0px;
+	}
+}
+
+.portfolio-filter {
+	padding: 20px 0;
+	line-height: 1.2;
+}
+
+.masonry-filter {
+	@include scale-link(1px, #212121);
+	
+	li {
+		padding: 10px;
+
+		a {
+			text-transform:uppercase;
+			font-family: $title-font;
+			font-size: 16px;
+
+			&.filter-active {
+				
+				&:after {
+					width: 100%;
+					left:0;
+				}
+			}
+		}
+	}
+}
+
+// ------------------------------------------
+// PROBLEM WITH WIDTH 
+// ------------------------------------------ 
+
+.portfolio-layout-boxed {
+
+	.col-md-3 {
+
+		.portfolio-thumbnail {
+			margin:0;
+		}
+	}
+}
+
+.site-content.portfolio-layout-full-width {
+	margin-bottom:0px;
+
+	.basel-pagination,
+	.basel-portfolio-load-more {
+		margin-bottom:40px;
+	}
+}
+
+// ------------------------------------------
+// RELATED PROJECTS 
+// ------------------------------------------ 
+
+.post-slide.portfolio {
+	background-color: black;
+	color: white;
+	margin-bottom: 20px;
+	position: relative;
+	overflow: hidden;
+	height: 300px;
+	text-align: center;
+
+	a {
+		color: white;
+	}
+
+	> a {
+		display: block;
+	}
+
+	.entry-thumbnail {
+		margin-bottom: 0;
+		-webkit-transition:all 0.25s ease-in-out;
+		-moz-transition:all 0.25s ease-in-out;
+		-o-transition:all 0.25s ease-in-out;
+		transition:all 0.25s ease-in-out;
+	}
+
+	.post-date {
+		display: none;
+	}
+
+	.post-mask {
+		position: absolute;
+		opacity: 1;
+		visibility: visible;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		font-size:0;
+		padding: 15px;
+
+		-webkit-transition:all 0.25s ease-in-out;
+		-moz-transition:all 0.25s ease-in-out;
+		-o-transition:all 0.25s ease-in-out;
+		transition:all 0.25s ease-in-out;
+
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+		-sand-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+
+		> a {
+			border-color: rgba(255,255,255,0.4);
+			background-color:transparent;
+
+			&:hover {
+				background-color:white;
+				color:black;
+				border-color:white;
+			}
+		}
+	}
+
+	.entry-title {
+		font-size: 16px;
+		margin-bottom: 15px;
+		line-height: 1.4;
+		overflow: hidden;
+  		max-height: 91px;
+
+		a {
+			color: white;
+
+			&:hover {
+				text-decoration:none;
+				color:rgba(255,255,255,0.8);
+			}
+		}
+	}
+}
+
+//** slide do not image  **//
+
+.portfolio.post-slide.has-post-thumbnail {
+	height: auto;
+
+	.post-mask {
+		opacity: 0;
+		visibility: hidden;
+		top: 55%;
+	}
+
+	&:hover {
+
+		> .post-mask {
+			opacity: 1;
+			visibility: visible;
+			top: 50%;
+		}
+
+		.entry-thumbnail {
+			opacity: 0.2;
+		}
+	} 
+}
+
+// ------------------------------------------
+// DEFAULT STILE 
+// ------------------------------------------ 
+
+.portfolio-entry {
+	margin-bottom: 30px;
+
+	.entry-header {
+		position: relative;
+	}
+
+	.entry-thumbnail {
+		position: relative;
+		overflow: hidden;
+		background-color: black;
+	}
+
+	.portfolio-thumbnail {
+		display:block;
+		margin:-1px;
+		transform: scale(1);
+		-o-transform: scale(1);
+		-moz-transform: scale(1);
+		-webkit-transform: scale(1);
+		-ms-transform: scale(1);
+		-sand-transform: scale(1);
+
+		-webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+	}
+
+	.portfolio-enlarge {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		display: inline-block;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		padding-left: 15px;
+		padding-right: 15px;
+		font-size: 12px;
+		border-color: white;
+		color: white;
+		text-transform: uppercase;
+		@include border-button;
+		opacity: 0;
+		visibility: hidden;
+		-webkit-transform: translateY(-50%) translateX(-50%);
+		-o-transform: translateY(-50%) translateX(-50%);
+		-moz-transform: translateY(-50%) translateX(-50%);
+		-ms-transform: translateY(-50%) translateX(-50%);
+		-sand-transform: translateY(-50%) translateX(-50%);
+		transform: translateY(-50%) translateX(-50%);
+
+		-webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+        	background-color:white;
+        	color: rgb(77, 77, 77);
+        }
+	}
+
+	.portfolio-info {
+		width: 100%;
+
+		-webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+	}
+
+	.entry-title {
+		font-size: 14px;
+		letter-spacing: .6px;
+		line-height: 1.6;
+		text-transform: uppercase;
+		margin-bottom: 0;
+
+			a {
+
+				&:hover {
+					text-decoration:none;
+				}
+			}
+	}
+
+	.proj-cats-list {
+		margin-top: 15px;
+
+		li {
+			font-size: 14px;
+			margin-left: 0px;
+			display:inline-block;
+			text-transform: none;
+
+			&:after {
+				content: "/";
+				padding:0 5px 0 7px;
+				font-size: 10px;
+				position: relative;
+				top: -1px;
+				display: inline-block;
+			}
+
+			&:first-child {
+				margin-left: 0px;
+			}
+
+			&:last-child {
+				margin-left: 0px;
+
+				&:after {
+					content: none;
+				}
+			}
+		}
+	}
+
+	.entry-summary {
+		display: none;
+	}
+
+	&:hover .entry-thumbnail > .portfolio-thumbnail {
+		opacity: 0.2;
+		transform: scale(1.05);
+		-o-transform: scale(1.05);
+		-moz-transform: scale(1.05);
+		-webkit-transform: scale(1.05);
+		-ms-transform: scale(1.05);
+		-sand-transform: scale(1.05);
+	}
+
+	&:hover .entry-header .entry-thumbnail > .portfolio-enlarge {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+// ------------------------------------------
+// SAME STYLE
+// ------------------------------------------ 
+
+.portfolio-hover-inverse .portfolio-entry,
+.portfolio-hover .portfolio-entry,
+.portfolio-bordered .portfolio-entry,
+.portfolio-bordered-inverse .portfolio-entry  {
+
+	.entry-header {
+		text-align: center;
+	}
+	
+	.portfolio-info {
+		position: absolute;
+		top: 55%;
+		visibility: hidden;
+		opacity: 0;
+		padding: 10px 20px;
+		
+		-webkit-transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-sand-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+
+	.portfolio-enlarge {
+		position: absolute;
+		top: auto;
+		left: auto;
+		top: 0;
+		right: 0;
+		display: inline-block;
+		font-size: 0;
+		color: white;
+		text-align: center;
+		width: 30px;
+		padding: 0;
+		border:none;
+		overflow: hidden;
+		opacity: 0;
+		-webkit-transform: translateY(0%) translateX(0%);
+		-o-transform: translateY(0%) translateX(0%);
+		-moz-transform: translateY(0%) translateX(0%);
+		-ms-transform: translateY(0%) translateX(0%);
+		-sand-transform: translateY(0%) translateX(0%);
+		transform: translateY(0%) translateX(0%);
+
+		&:after {
+			content: "\e057";
+			display: inline-block;
+			line-height: 30px;
+			font-size: 14px;
+			font-family: 'simple-line-icons';
+		}
+
+		&:hover {
+			background-color: transparent;
+			color: rgba(255, 255, 255, 0.8);
+		}
+	}
+
+	.entry-title {
+
+		a {
+			color: white;
+
+			&:hover {
+				color: rgba(255, 255, 255, 0.8);
+			}
+		}
+	}
+
+	.proj-cats-list {
+
+		li {
+			color: rgba(255, 255, 255, 0.8);
+		}
+	}
+
+	&:hover .entry-header > .portfolio-info {
+		opacity: 1;
+		visibility: visible;
+		top: 50%;
+	}
+}
+
+// ------------------------------------------
+// SHOW TEXT ON MOUSE OVER
+// ------------------------------------------ 
+
+.portfolio-hover-inverse .portfolio-entry {
+
+	.portfolio-info {
+		top: 50%;
+		visibility: visible;
+		opacity: 1;
+	}
+
+ 	.portfolio-thumbnail {
+		opacity: 0.4;
+		transform: scale(1.1);
+		-webkit-transform: scale(1.1);
+		-o-transform: scale(1.1);
+		-moz-transform: scale(1.1);
+		-ms-transform: scale(1.1);
+		-sand-transform: scale(1.1);
+	}
+
+	&:hover .entry-thumbnail > .portfolio-thumbnail {
+		opacity: 0.9;
+		transform: scale(1);
+		-webkit-transform: scale(1);
+		-o-transform: scale(1);
+		-moz-transform: scale(1);
+		-ms-transform: scale(1);
+		-sand-transform: scale(1);
+	}
+
+	&:hover .entry-header > .portfolio-info {
+		opacity: 0;
+		visibility: hidden;
+		top: 45%;
+	}
+}
+
+// ------------------------------------------
+// SHOW TEXT UNDER IMAGES
+// ------------------------------------------
+
+.portfolio-text-shown .portfolio-entry {
+
+	.portfolio-info {
+		padding: 20px 50px 20px 0px;
+		position: relative;
+
+		&:after {
+			content:"\f105";
+			position: absolute;
+			right: 30px;
+			top: 50%;
+			font-size: 52px;
+			font-family: "FontAwesome";
+ 			color: rgba(129, 129, 129, 0.3);	
+			opacity: 0;
+			visibility: hidden;
+
+			-webkit-transform: translateY(-50%);
+			-o-transform: translateY(-50%);
+			-moz-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			-sand-transform: translateY(-50%);
+			transform: translateY(-50%);
+
+			-webkit-transition: all 0.3s ease-in-out;
+	        -moz-transition: all 0.3s ease-in-out;
+	        -ms-transition: all 0.3s ease-in-out;
+	        -o-transition: all 0.3s ease-in-out;
+	        transition: all 0.3s ease-in-out;
+		}
+	}
+
+	&:hover .entry-header > .portfolio-info {
+		padding-left: 20px;
+		background-color: rgb(248, 248, 248);
+	}
+
+	&:hover .entry-header > .portfolio-info:after {
+		right: 20px;
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+// ------------------------------------------
+// SHOW TEXT WITH BACKGROUND
+// ------------------------------------------
+
+.portfolio-with-bg .portfolio-entry,
+.portfolio-with-bg-alt .portfolio-entry {
+
+	.entry-thumbnail {
+
+		&:after {
+			content:"\f105";
+			position: absolute;
+			left: 45%;
+			top: 50%;
+			font-size: 60px;
+			font-family: "FontAwesome";
+			color: white;
+			opacity: 0;
+			visibility: hidden;
+
+			-webkit-transform: translateY(-50%) translateX(-50%);
+			-o-transform: translateY(-50%) translateX(-50%);
+			-moz-transform: translateY(-50%) translateX(-50%);
+			-ms-transform: translateY(-50%) translateX(-50%);
+			-sand-transform: translateY(-50%) translateX(-50%);
+			transform: translateY(-50%) translateX(-50%);
+
+			-webkit-transition: all 0.3s ease-in-out;
+	        -moz-transition: all 0.3s ease-in-out;
+	        -ms-transition: all 0.3s ease-in-out;
+	        -o-transition: all 0.3s ease-in-out;
+	        transition: all 0.3s ease-in-out;
+		}
+
+	}
+
+	.proj-cats-list {
+
+		li {
+			-webkit-transition: all 0.3s ease-in-out;
+	        -moz-transition: all 0.3s ease-in-out;
+	        -ms-transition: all 0.3s ease-in-out;
+	        -o-transition: all 0.3s ease-in-out;
+	        transition: all 0.3s ease-in-out;
+		}
+	}
+
+	.portfolio-info {
+		padding: 20px;
+		background-color: rgb(248, 248, 248);
+	}
+
+	.portfolio-enlarge {
+		display: none;
+	}
+
+	&:hover .entry-header > .portfolio-info {
+		background-color: rgb(35, 35, 35);
+
+		a {
+			color: white;
+		}
+
+		.proj-cats-list {
+
+			li {
+				color: rgba(255, 255, 255, 0.8);
+			}
+		}
+	}
+
+	&:hover .entry-header > .portfolio-info:after {
+		right: 20px;
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&:hover .entry-header > .entry-thumbnail:after {
+		opacity: 1;
+		visibility: visible;
+		left: 50%;
+	}
+}
+
+// ------------------------------------------
+// TEXT WITH ALT. BACKGROUND
+// ------------------------------------------
+
+.portfolio-with-bg-alt .portfolio-entry {
+
+	&:hover .entry-header > .portfolio-info {
+		background-color: $primary-color;
+	}
+}
+
+// ------------------------------------------
+// BORDER STYLE
+// ------------------------------------------
+
+.portfolio-bordered .portfolio-entry {
+
+	.entry-header {
+
+		&:before,
+		&:after {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			bottom: 20px;
+			left: 20px;
+			content: '';
+			-moz-transition: opacity .4s, -moz-transform .4s;
+			-o-transition: opacity .4s, -o-transform .4s;
+			-webkit-transition: opacity .4s, -webkit-transform .4s;
+			transition: opacity .4s, transform .4s;
+		}
+
+		&:before {
+			border-top: 1px solid rgba(255, 255, 255, 0.5);
+			border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+		}
+
+		&:after {
+			border-right: 1px solid rgba(255, 255, 255, 0.5);
+			border-left: 1px solid rgba(255, 255, 255, 0.5);
+		}
+	}
+
+	.entry-thumbnail {
+		position: static;
+	}
+
+	.portfolio-info {
+		top: 50%;
+		visibility: visible;
+		opacity: 1;
+		padding: 10px 30px;
+	}
+
+ 	.portfolio-thumbnail {
+		opacity: 0.4;
+		transform: scale(1.1);
+		-webkit-transform: scale(1.1);
+		-moz-transform: scale(1.1);
+		-ms-transform: scale(1.1);
+		-sand-transform: scale(1.1);
+		-o-transform: scale(1.1);
+	}
+
+	&:hover .entry-thumbnail > .portfolio-thumbnail {
+		opacity: 0.9;
+		transform: scale(1);
+		-webkit-transform: scale(1);
+		-moz-transform: scale(1);
+		-ms-transform: scale(1);
+		-sand-transform: scale(1);
+		-o-transform: scale(1);
+	}
+
+	&:hover .entry-header > .portfolio-info {
+		opacity: 0;
+		visibility: hidden;
+		top: 45%;
+	}
+
+	&:hover > .entry-header:after {
+		-webkit-transform: scale(1, 0);
+		-moz-transform: scale(1, 0);
+		-ms-transform: scale(1, 0);
+		-sand-transform: scale(1, 0);
+		-o-transform: scale(1, 0);
+		transform: scale(1, 0);
+	}
+
+	&:hover > .entry-header:before {
+		-webkit-transform: scale(0, 1);
+		-moz-transform: scale(1, 0);
+		-o-transform: scale(1, 0);
+		-ms-transform: scale(1, 0);
+		-sand-transform: scale(1, 0);
+		transform: scale(0, 1);
+	}
+
+	&:hover > .entry-header:after,
+	&:hover > .entry-header:before {
+		opacity: 0;
+	}
+}
+
+// ------------------------------------------
+// BORDER INVERSE STYLE
+// ------------------------------------------
+
+.portfolio-bordered-inverse .portfolio-entry {
+
+	.entry-thumbnail {
+		position: static;
+	}
+
+	.entry-header {
+
+		&:before,
+		&:after {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			bottom: 20px;
+			left: 20px;
+			content: '';
+			opacity:0;
+			-moz-transition: opacity .35s, -moz-transform .35s;
+			-o-transition: opacity .35s, -o-transform .35s;
+			-webkit-transition: opacity .35s, -webkit-transform .35s;
+			transition: opacity .35s, transform .35s;
+			z-index: 1;
+		}
+
+		&:after {
+			border-right: 1px solid rgba(255, 255, 255, 0.5);
+			border-left: 1px solid rgba(255, 255, 255, 0.5);
+			-webkit-transform: scale(1, 0);
+			-moz-transform: scale(1, 0);
+			-o-transform: scale(1, 0);
+			-ms-transform: scale(1, 0);
+			-sand-transform: scale(1, 0);
+			transform: scale(1, 0);
+		}
+
+		&:before {
+			border-top: 1px solid rgba(255, 255, 255, 0.5);
+			border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+			-webkit-transform: scale(0, 1);
+			-moz-transform: scale(1, 0);
+			-ms-transform: scale(1, 0);
+			-sand-transform: scale(1, 0);
+			-o-transform: scale(1, 0);
+			transform: scale(0, 1);
+		}
+	}
+
+	.portfolio-enlarge {
+		display:none;
+	}
+
+	.portfolio-info {
+		padding:10px 30px;
+		z-index: 2;
+	}
+
+	&:hover > .entry-header:after,
+	&:hover > .entry-header:before {
+		opacity: 1;
+		-o-transform: scale(1);
+		-moz-transform: scale(1);
+		-ms-transform: scale(1);
+		-sand-transform: scale(1);
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+
+// ------------------------------------------
+// PAGINATION POSITION
+// ------------------------------------------
+
+.page-portfolio {
+
+	.basel-pagination,
+	.basel-portfolio-load-more {
+		margin-top: 40px;
+		margin-bottom:0px;
+	}
+}
+
+// ------------------------------------------
+// SPACE
+// ------------------------------------------
+
+@each $space in 0, 2, 6, 10, 20, 30 {
+
+	.row-spacing-#{$space} {
+    	
+    	.portfolio-entry {
+    		padding-left:#{$space / 2}px;
+    		padding-right:#{$space / 2}px;
+    		margin-bottom:#{$space}px;
+    	}
+  	}
+}
+

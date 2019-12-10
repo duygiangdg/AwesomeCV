@@ -1,0 +1,32 @@
+{
+	"top-bar" : false,
+	"header" : "shop",
+	"menu_align" : "left",
+	"primary-color" : "#ccae93",
+	"header-border" : false,
+	"shopping_cart" : 2,
+	"shopping_icon_alt" : false,
+	"header_search" : "full-screen",
+	"cart_position" : "side",
+	"text-font" : {
+		"font-family" : "Cabin",
+		"google" : true
+	},
+	"primary-font" : {
+		"font-family" : "Fredericka the Great",
+		"google" : true,
+		"font-weight" : 400,
+		"color" : "#96736c"
+	},
+	"post-titles-font" : {
+		"font-family" : "Fredericka the Great",
+		"google" : true,
+		"font-weight" : 400
+	},
+	"navigation-font" : {
+		"font-family" : "Josefin Sans",
+		"google" : true,
+		"font-size" : "13px",
+		"font-weight" : 700
+	}
+}

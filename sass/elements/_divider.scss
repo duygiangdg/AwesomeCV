@@ -1,0 +1,108 @@
+
+// ------------------------------------------------------------------------------------------------
+// SECTION-DIVIDER
+// ------------------------------------------------------------------------------------------------
+
+.basel-row-divider {
+	position: relative;
+	margin-left: -15px;
+	margin-right: -15px;
+	z-index: 1;
+
+	svg {
+		display: block;
+	}
+
+	&.dvr-position-top {
+
+		svg {
+			margin-top: -1px;
+		}
+	}
+
+	&.dvr-position-bottom {
+
+		svg {
+			margin-bottom: -1px;			
+		}
+	}
+}
+
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) { //only for chrome
+
+	.basel-row-divider {
+  	
+		&.dvr-position-top {
+	
+			svg {
+				margin-top: 0px;
+			}
+		}
+	
+		&.dvr-position-bottom {
+	
+			svg {
+				margin-bottom: 0px;			
+			}
+		}
+	}
+}
+
+.dvr-style-paint-stroke {
+
+	svg {
+		height: 2vw;
+	}
+}
+
+.dvr-style-waves-small,
+.dvr-style-waves-wide,
+.dvr-style-triangle {
+
+	svg {
+		height: 3vw;	
+	}
+}
+
+.dvr-style-clouds {
+
+	svg {
+		height: 6vw;
+	}
+}
+
+.dvr-style-curved-line,
+.dvr-style-diagonal-left,
+.dvr-style-diagonal-right,
+.dvr-style-half-circle {
+
+	svg {
+		height: 50px;	
+	}
+}
+
+// --------------------------------
+// SVG-DIVIDER-OVERLAP
+// --------------------------------
+
+.dvr-overlap-enable {
+
+	svg {
+		position: absolute;
+		left: 0;
+	}
+
+	&.dvr-position-top {
+
+		svg {
+			top: 100%;	
+		}
+	}
+
+	&.dvr-position-bottom {
+
+		svg {
+			bottom: 100%;			
+		}
+	}
+}

@@ -1,0 +1,10 @@
+{
+	"top-bar": false,
+	"header": "shop",
+	"menu_align": "center",
+	"header_background":{
+	  "background-color":"#000"
+	},
+	"header_color_scheme": "light",
+	"products_hover": "info"
+}

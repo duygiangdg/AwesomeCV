@@ -1,0 +1,616 @@
+
+// ------------------------------------------------------------------------------------------------
+// PRODUCT FILTERS
+// ------------------------------------------------------------------------------------------------ 
+
+.basel-product-filters {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+
+    .basel-pf-dropdown {
+        position: absolute;
+        right: 6px;
+        left: 6px;
+        top: 100%;
+        bottom: auto;
+        height: auto;
+        width: auto;
+        display: none;
+        overflow: hidden;
+        z-index: 300;
+        background-color: #ffffff;
+        @include shadow-drop-element;
+    }
+
+    .basel-pf-checkboxes {
+        position: relative;
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 200px;
+        flex: 1 1 200px;
+        width: 0;
+
+        .basel-scroll-content {
+            max-height: 35vh;
+            position: relative;
+            overflow: scroll;
+            overflow-x: hidden;
+        }
+    }
+
+    > div {
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-bottom: 10px;
+    }
+}
+
+// ------------------------------------------
+// FILTER BUTTON
+// ------------------------------------------
+
+.basel-pf-btn {
+
+    button {
+        padding-left: 40px;
+        padding-right: 40px;
+        @include btn-color-primary;
+    }
+}
+
+// ------------------------------------------
+// FILTER RESULTS
+// ------------------------------------------
+
+// .basel-pf-checkboxes {
+//     position: relative;
+// }
+
+// ------------------------------------------
+// FILTER RESULTS
+// ------------------------------------------
+
+.basel-pf-title {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border: 1px solid rgba(129, 129, 129, 0.20);
+    padding-left: 15px;
+    padding-right: 40px;
+    height: 42px;
+    line-height: 1;
+    color: $light-dark;
+    cursor: pointer;
+    user-select: none;
+
+    -webkit-transition: border-color .5s ease;
+    transition: border-color .5s ease;
+
+    .title-text {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
+        font-weight: 600;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+    &:after {
+        content: "\e604";
+        font-family: 'simple-line-icons';
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        margin-top: -6px;
+        font-size: 12px;
+        color: #b7b7b7;
+
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+
+        -webkit-transition:transform .2s ease;
+        transition:transform .2s ease;
+    }
+
+    &:hover {
+        border-color: rgba(129, 129, 129, 0.30);
+    }
+
+    .opened & {
+        
+        &:after {
+            transform: rotate(-180deg);
+        }
+    }
+
+    .basel-product-filters.color-scheme-light & {
+        border-color: $dark-border-color;
+        color: $scheme-light--title-color;
+
+        &:after {
+            color: $scheme-light--body-color;
+        }
+
+        &:hover {
+            border-color:rgba(255, 255, 255, 0.4);
+        }
+    }
+}
+
+// ------------------------------------------
+// FILTER RESULTS
+// ------------------------------------------
+
+.basel-pf-results {
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: 1;
+
+    li {
+        position: relative;
+        display: inline-block;
+        padding: 4px 8px;
+        margin-left: 5px;
+        font-size: 12px;
+        font-weight: 600;
+        color: $light-dark;
+        background-color: #f1f1f1;
+
+        -webkit-transition: all .25s ease;
+        transition: all .25s ease;
+
+        &:after {
+            content: "\f00d";
+            font-family: 'fontawesome';
+            font-weight: 300;
+            position: absolute;
+            top: 50%;
+            left: 7px;
+            margin-top: -4px;
+            font-size: 8px;
+            opacity: 0;
+
+            -webkit-transition: opacity .2s ease;
+            transition: opacity .2s ease;
+        }
+
+        &:hover {
+            padding-left: 20px;
+
+            &:after {
+                opacity: 1;
+            }
+        }
+    }
+
+    .basel-product-filters.color-scheme-light & {
+
+        li {
+            color: $scheme-light--body-color-darken;
+            background-color: $scheme-light--background-popup;			
+        }
+    }
+}
+
+// ------------------------------------------
+// FILTER DROPDOWN WITH SCROLL
+// ------------------------------------------
+
+// .basel-pf-checkboxes {
+    
+//     .basel-scroll-content {
+//         max-height: 35vh;
+//         position: relative;
+//         overflow: scroll;
+//         overflow-x: hidden;
+//     }
+// }
+
+// ------------------------------------------
+// GENERAL STYLE OF FILTER DROPDOWN
+// ------------------------------------------
+
+.basel-pf-dropdown {
+    // position: absolute;
+    // right: 6px;
+    // left: 6px;
+    // top: 100%;
+    // height: auto;
+    // width: auto;
+    // display: none;
+    // overflow: hidden;
+    // z-index: 300;
+    // background-color: #ffffff;
+    // @include shadow-drop-element;
+
+    .pf-value {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 18px;
+        padding-right: 18px;
+        color: #777777;
+        font-size: 14px;
+        line-height: 20px;
+        cursor: pointer;
+
+        -webkit-transition: all 0.25s ease;
+        transition: all 0.25s ease;
+
+        &:hover {
+            color: #777777;
+            background-color: #f9f9f9;
+            text-decoration: none;
+
+            // .filter-swatch {
+
+            //     > span {
+
+            //         &:after {
+            //             @extend %filter-swatch-style-hover;
+            //         }
+            //     }
+            // }
+        }
+    }
+
+    .pf-active {
+
+        > .pf-value {
+            color: #333;
+            font-weight: 600;
+
+            // .filter-swatch {
+
+            //     > span {
+
+            //         &:after {
+            //             @extend %filter-swatch-style-hover;
+            //         }
+            //     }
+            // }
+        }	    	
+    }
+
+    // ------------------------------------------
+    // SWATCHES STYLE
+    // ------------------------------------------
+
+    .filter-swatch {
+        @extend %filter-swatch-style;
+
+        // > span {
+            
+        //     &:after {
+        //         content: "\e031";
+        //         font-family: "simple-line-icons";
+        //         position: absolute;
+        //         top: 0;
+        //         bottom: 0;
+        //         right: 0;
+        //         left: 0;
+        //         display: -webkit-box;
+        //         display: -ms-flexbox;
+        //         display: flex;
+        //         -webkit-box-pack: center;
+        //         -ms-flex-pack: center;
+        //         justify-content: center;
+        //         -webkit-box-align: center;
+        //         -ms-flex-align: center;
+        //         align-items: center;
+        //         opacity: 0;
+        //         font-weight: 100;
+        //         line-height: 1;
+        //         color: white;
+        //         background-color: rgba(0,0,0,0.1);
+        //         border-radius: 50%;
+                 
+    
+        //         -webkit-transition:
+        //             opacity 0.2s ease;
+        //         transition:
+        //             opacity 0.2s ease;
+        //     }
+        // }
+    }
+
+    // ------------------------------------------
+    // SWATCHES SIZE SMALL
+    // ------------------------------------------
+
+    .swatches-small {
+
+        .filter-swatch {
+
+            > span {
+                @extend %swatch-style-small;
+
+                &:after {
+                    font-size: 8px;
+                }
+            }
+        }
+
+        &.swatches-brands {
+            
+            .filter-swatch {
+
+                > span {
+                    @extend %swatch-brand-style-small;
+                }
+            }
+        }
+    }
+
+    // ------------------------------------------
+    // SWATCHES SIZE NORMAL
+    // ------------------------------------------
+
+    .swatches-normal {
+
+        .filter-swatch {
+
+            > span {
+                @extend %swatch-style-normal;
+
+                &:after {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        &.swatches-brands {
+            
+            .filter-swatch {
+
+                > span {
+                    @extend %swatch-brand-style-normal;
+                }
+            }
+        }
+    }
+
+    // ------------------------------------------
+    // SWATCHES SIZE LARGE
+    // ------------------------------------------
+
+    .swatches-large {
+
+        .filter-swatch {
+
+            > span {
+                @extend %swatch-style-large;
+
+                &:after {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        &.swatches-brands {
+            
+            .filter-swatch {
+
+                > span {
+                    @extend %swatch-brand-style-large;
+                }
+            }
+        }
+    }
+
+    // ------------------------------------------
+    //  SWATCHES WITH BRAND
+    // ------------------------------------------
+
+    .swatches-brands {
+
+        .filter-swatch {
+
+            span {
+                border-radius: 0;
+                border: none!important;
+            }
+        }
+
+        &:not(.show-labels-off) {
+
+            .filter-swatch {
+
+                span {
+
+                    &:after {
+                        content: none;
+                    }
+                } 
+            }           	
+        }
+
+        &.show-labels-off {
+
+            .filter-swatch {
+
+                span {
+
+                    &:after {
+                        border-radius: 0;
+                        background-color: rgba(255, 255, 255, 0.6);
+                        color: $heading-color;
+                    }
+                }
+            }       	
+        }
+    }
+
+    // ------------------------------------------
+    //  SWATCHES LABLE OFF
+    // ------------------------------------------
+
+    .show-labels-off {
+        padding: 10px;
+
+        .filter-swatch {
+            margin-right: 0;
+        }
+
+        li {
+            display: inline-block;
+        }
+
+        .pf-value {
+
+            &:hover {
+                background-color: transparent!important;
+            }
+        }
+
+        .swatch-inner {
+            margin: 6px;
+            padding: 0;
+        }
+
+        li:not(.with-swatch-text) {
+
+            .layer-term-name {
+                display: none;
+            }
+        }
+    }
+    
+    .basel-product-filters.color-scheme-light & {
+        background-color: $scheme-light--background-popup;
+
+        .pf-value {
+            color: $scheme-light--body-color;
+
+            &:hover {
+                color: $scheme-light--body-color;
+                background-color: rgba(255, 255, 255, 0.08);
+            }
+        }
+
+        .pf-active {
+
+            > .pf-value {
+                color: $scheme-light--body-color-darken;
+            }	    	
+        }
+
+        .swatches-brands {
+
+            &.show-labels-off {
+
+                .filter-swatch {
+
+                    span {
+
+                        &:after {
+                            background-color: rgba(0,0,0,0.6);
+                            color: $scheme-light--title-color;
+                        }
+                    }
+                }       	
+            }
+        }
+    }
+}
+
+// ------------------------------------------
+//  WIDGET PRICE RANGE
+// ------------------------------------------
+
+.basel-pf-price-range {
+
+    .basel-pf-dropdown {
+        padding: 20px;
+    }
+
+    .ui-slider-horizontal {
+        margin-bottom: 20px;
+    }
+
+    .filter_price_slider_amount {
+        margin-bottom: -20px;
+        margin-left: -20px;
+        margin-right: -20px;
+        padding: 6px 20px;
+        text-align: center;
+        background-color: #f9f9f9;
+        border-top: 1px solid rgba(129, 129, 129, 0.20);
+    }
+
+    .price_label {
+        font-size: 14px;
+        font-weight: 600;
+        color: $heading-color;
+
+        .from {
+
+            &:after {
+                content:"-";
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .basel-product-filters.color-scheme-light & {
+
+        .filter_price_slider_amount {
+            background-color: $scheme-light--background-popup;
+            border-top: 1px solid $dark-border-color;
+        }
+
+        .price_label {
+            color: $scheme-light--title-color;
+        }
+    }
+}
+
+// ------------------------------------------
+//  WIDGET CATEGORIES
+// ------------------------------------------
+
+.basel-pf-categories {
+
+    .children {
+
+        .pf-value {
+            padding-left: 35px;
+        }
+
+        .children {
+
+            .pf-value {
+                padding-left: 55px;
+            }
+        }
+    }
+}

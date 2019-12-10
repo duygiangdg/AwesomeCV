@@ -1,0 +1,298 @@
+
+// --------------------------------------------------------------------------------------------
+// YITH MULTI VENDOR
+// --------------------------------------------------------------------------------------------
+
+.basel-navigation {
+
+	.menu {
+
+		.menu-item-object-yith_shop_vendor {
+	
+			&.menu-item-design-default {
+	
+				.sub-menu-dropdown {
+					padding-left: 15px;
+					padding-right: 15px;
+				}
+			}
+	
+			&.menu-item-design-full-width {
+				.sub-menu-dropdown {
+					padding: 30px 0;
+				}
+			}
+		}	
+	}
+}
+
+.by-vendor-name {
+    display: block;
+	 font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.popup-quick-view {
+
+	.by-vendor-name {
+   	margin-bottom: 5px;
+	}
+}
+
+.single-product-content {
+
+	.product_meta {
+
+		.item-sold {
+
+			strong {
+				font-weight: normal;
+				color: #747474;
+			}
+		}
+	}
+}
+
+.vendors-list {
+	margin-bottom: 50px;
+
+	ul {
+
+		li {
+		font-size: 12px;
+		color: rgb(187, 187, 187);
+
+			a {
+				font-size: 14px;
+				color: rgba(0, 0, 0, 0.9);
+				vertical-align: sub;
+				text-decoration: none;
+
+				&:hover {
+					color: $primary-color;
+				}
+			}
+		}
+	}
+}
+
+.woocommerce-Tabs-panel--yith_wc_vendor {
+
+	h2 {
+		font-size: 18px;
+ 			
+ 		a {
+			font-weight: bold;
+ 		}
+	}
+
+	.vendor-description {
+		line-height: 1.7;
+		letter-spacing: 0.3px;
+	}
+}
+
+.product-grid-item {
+
+	.by-vendor-name {
+		display: none;
+	}	
+}
+
+.basel-hover-info, 
+.basel-hover-standard {
+
+	.by-vendor-name {
+		display: block;
+		font-size: 14px;
+		margin-bottom: 15px;
+	}
+}
+
+.basel-hover-info {
+
+	.by-vendor-name {
+		color: white !important;
+
+		a {
+			color: white;
+		}
+	}
+}
+
+#yith-wpv-abuse {
+	display: inline-block;
+	margin-top: 10px;
+}
+
+.product_list_widget {
+
+	.mini_cart_item {
+
+		small {
+	
+			a {
+				display: inline-block;
+			}
+		}
+	}
+}
+
+// --------------------------------------------------------------------------------------------
+// WC VENDORS
+// --------------------------------------------------------------------------------------------
+
+label[for="apply_for_vendor"],
+label[for="agree_to_terms"] {
+	display: inline-block;
+}
+
+input.date-pick {
+	line-height: 22px;
+	margin-right: 15px;
+	margin-left: 5px;
+	padding: 5px;
+}
+
+.pv_paypal_container, 
+.pv_shop_name_container,
+#pv_seller_info_container,
+#pv_shop_description_container {
+
+	b {
+		font-weight: 600;
+	}
+}
+
+.pv_paypal_container, 
+.pv_shop_name_container {
+	float: left;
+	width: 50%;
+
+	input {
+		margin-top: 20px;
+	}
+}
+
+.pv_paypal_container {
+	padding-right: 15px;
+}
+
+.pv_shop_name_container {
+	padding-left: 15px;
+}
+
+#pv_seller_info_container {
+	clear: both;
+}
+
+#pv_seller_info_container,
+#pv_shop_description_container {
+	margin-bottom: 20px;
+
+	textarea {
+		width: 100% !important;
+	}
+}
+
+// ------------------------------------------
+// SOLD BY ON SINGLE PAGE
+// ------------------------------------------
+
+.single-product-content {
+
+	.product_meta {
+
+		br {
+			content: "";
+   		display: block;
+   		height: 10px;
+		}
+	}
+
+	&.product-design-default {
+
+		.product_meta {
+	
+			br {
+	   		height: 20px;
+			}
+		}
+	}
+}
+
+// ------------------------------------------
+// HOVER STYLE
+// ------------------------------------------
+
+.product-grid-item { 
+
+	br {
+		display: none;
+	}
+
+	.wcvendors_sold_by_in_loop {
+		display: none;
+	}
+
+}
+
+.basel-hover-info, 
+.basel-hover-standard {
+
+	.wcvendors_sold_by_in_loop {
+		display: block;
+		font-size: 14px;
+		margin-bottom: 10px;
+	}
+}
+
+.basel-hover-info {
+
+	.wcvendors_sold_by_in_loop {
+		color: white;
+		
+		a {
+			color: white;
+		}
+	}
+}
+
+.basel-hover-standard {
+
+	.wcvendors_sold_by_in_loop {
+
+		a {
+			color: #4C4C4C;
+			padding: 0;
+			font-size: 14px;
+
+			&:hover {
+				text-decoration: underline;
+				color: #4C4C4C;
+			}
+		}
+	}
+}
+
+// ------------------------------------------
+// DESCRIPTION SHOP, QUICK-VIEW, SINGLEPRODUCT
+// ------------------------------------------
+
+.wcv_shop_description {
+	margin-bottom: 30px;
+	line-height: 1.5;
+}
+
+.popup-quick-view {
+
+	> h1 {
+		padding: 30px;
+		margin-bottom: 0;
+	}
+
+	.wcv_shop_description {
+		padding: 0 30px 30px 30px;
+		margin-bottom: 0;
+	}
+}

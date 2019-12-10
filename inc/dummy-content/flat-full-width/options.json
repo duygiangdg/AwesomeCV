@@ -1,0 +1,30 @@
+{
+	"site_width": "wide",
+	"menu_align": "left",
+	"primary-color": "#b63d44",
+	"top-bar-bg": {
+		"background-color": "#b63d44"
+	},
+	"products_hover": "quick",
+	"header-border": false,
+	"text-font": {
+		"font-family": "Lato",
+		"google": true
+	},
+	"primary-font": {
+		"font-family": "Poppins",
+		"google": true,
+		"font-weight": 600
+	},
+	"post-titles-font": {
+		"font-family": "Lato",
+		"google": true,
+		"font-weight": 600
+	},
+	"navigation-font": {
+		"font-family": "Lato",
+		"google": true,
+		"font-weight": 600,
+		"font-size": "13px"
+	}
+}

@@ -1,0 +1,74 @@
+
+// ------------------------------------------------------------------------------------------------
+// SITE SETTINGS
+// ------------------------------------------------------------------------------------------------ 
+
+// ------------------------------------------
+// TYPOGRAPHY
+// ------------------------------------------
+
+$main-font:'Karla',Arial, Helvetica, sans-serif;
+
+$title-font:'Karla',Arial, Helvetica, sans-serif;
+
+$secondary-title:'Lora','MS Sans Serif', Geneva, sans-serif;
+
+$alternative-font:'Courgette','Comic Sans MS', cursive;
+
+// ------------------------------------------
+// COLORS
+// ------------------------------------------ 
+
+$body-color:#4C4C4C;
+
+$primary-color:#1aada3;
+
+$heading-color:#1B1919;
+
+$alternative-color:#fbbc34; //rgb(25, 102, 96)
+
+// new color-scheme variables
+
+$light-dark:#4E4E4E;
+
+// ------------------------------------------
+// Slides space
+// ------------------------------------------ 
+
+$slides_space: 20px;
+
+// ---------------------------------------------
+// COLOR FOR COLOR SCHEME LIGHT AND DARK VERSION
+// ---------------------------------------------
+
+// $dark-bg-color: #111111; //dropdown, side-cart, owl-nav-bg color;
+
+$dark-darker-bg-color: rgba(0,0,0,0.3);
+
+// $dark-text-color: rgba(255,255,255,0.8);
+
+$dark-link-color: white;
+
+$dark-link-hover-color: rgba(255,255,255,0.8);
+
+$dark-border-color: rgba(255,255,255,0.1);
+
+// new color-scheme variables
+
+$scheme-light--title-color: white;
+
+$scheme-light--body-color-darken:white;
+
+$scheme-light--body-color: rgba(255,255,255,0.8);
+
+$scheme-light--background-popup:#111111; //dropdown, side-cart, owl-nav-bg color;
+
+$scheme-light--background-light-dark: rgba(0,0,0,0.3);
+
+// ------------------------------------------
+// WIDTH OF SCROLLER IN WINDOWS
+// ------------------------------------------ 
+
+$width-scrollbar-windows:17px;
+
+$width-scrollbar-windows-edge:12px;

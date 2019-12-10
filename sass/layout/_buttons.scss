@@ -1,0 +1,143 @@
+
+// --------------------------------------------------------------------------------------------
+// BUTTONS / #basel-button
+// --------------------------------------------------------------------------------------------
+
+.btn,
+.button,
+ button,
+.added_to_cart,
+input[type="submit"] {
+	display: inline-block;
+	text-align: center;
+	font-size: 14px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+  	line-height: 18px;
+	text-transform: uppercase;
+	letter-spacing: .3px;
+	border-radius: 0px;
+	border:1px solid;
+	-webkit-transition:all 0.25s ease-in-out;
+	-moz-transition:all 0.25s ease-in-out;
+	-o-transition:all 0.25s ease-in-out;
+	transition:all 0.25s ease-in-out;
+	@include btn-color-default;
+
+	&:focus {
+		outline:none;
+	}
+
+	// ------------------------------------------
+	// IMAGE IN BUTTON
+	// ------------------------------------------
+
+	i {
+		margin-left:3px;
+	}
+
+	// ------------------------------------------
+	// SIZE BOTTON
+	// ------------------------------------------
+
+	&.btn-size-small {
+		font-size: 12px;
+		line-height:16px;
+	  	padding-top: 7px;
+  		padding-bottom: 7px;
+	  	padding-left: 14px;
+	 	padding-right: 14px;
+	}
+	
+	&.btn-size-large {
+		font-size: 16px;
+		line-height:20px;
+		padding-top: 12px;
+  		padding-bottom: 12px;
+		padding-left: 28px;
+  		padding-right: 28px;
+	}
+
+	&.btn-size-extra-large {
+		font-size: 18px;
+		line-height:22px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		padding-left: 40px;
+  		padding-right: 40px;
+	}
+
+	// ------------------------------------------
+	// STYLE BOTTON
+	// ------------------------------------------
+
+	&.btn-style-bordered {
+		@include border-button;
+	}
+
+	&.btn-style-link {
+		@include link-button;
+	}
+
+	&.btn-round,
+	&.btn-style-round {
+		@include round-button;
+	}
+
+	// ------------------------------------------
+	// COLOR BOTTON
+	// ------------------------------------------
+
+	&.btn-color-primary {
+		@include btn-color-primary;
+	}
+
+	&.btn-color-alt {
+		@include btn-color-alternative;
+	}
+
+	&.btn-color-black {
+		@include btn-color-black;
+	}
+
+	&.btn-color-white {
+		@include btn-color-white;
+	}
+}
+
+// ------------------------------------------
+// BUTTONS INLINE / #basel-button-inline
+// ------------------------------------------
+
+.basel-button-wrapper {
+
+	&.btn-inline {
+		display: inline-block;
+		margin-bottom: 10px;
+		margin-right: 10px;
+	}
+}
+
+.text-center {
+
+	.basel-button-wrapper {
+
+		&.btn-inline {
+			margin-left: 5px;
+			margin-right: 5px;
+		}
+	}
+}
+
+.text-right {
+
+	.basel-button-wrapper {
+
+		&.btn-inline {
+			margin-left: 10px;
+			margin-right: 0;
+		}
+	}
+}

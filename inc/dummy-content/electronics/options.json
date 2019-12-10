@@ -1,0 +1,51 @@
+{
+   "site_width":"full-width",
+   "top-bar":"1",
+   "top-bar-color":"light",
+   "top-bar-bg":{
+      "background-color":"#0c6d8a",
+      "background-repeat":"",
+      "background-size":"",
+      "background-attachment":"",
+      "background-position":"",
+      "background-image":"",
+      "media":{
+         "id":"",
+         "height":"",
+         "width":"",
+         "thumbnail":""
+      }
+   },
+   "header-overlap":"",
+   "menu_align": "center",
+   "header_full_width":"0",
+   "right_column_width":"278",
+   "shopping_cart":"1",
+   "shopping_icon_alt":"1",
+   "header":"categories",
+   "header_color_scheme":"light",
+   "header_background":{
+      "background-color":"#0f8db3",
+      "background-repeat":"",
+      "background-size":"",
+      "background-attachment":"",
+      "background-position":"",
+      "background-image":"",
+      "media":{
+         "id":"",
+         "height":"",
+         "width":"",
+         "thumbnail":""
+      }
+   },
+   "primary-color":"#0f8db3",
+
+   "post-titles-font": {
+      "font-family": "Karla",
+      "google": true,
+      "font-weight": 600
+   },
+   "navigation-font": {
+      "font-weight": 600
+   }
+}

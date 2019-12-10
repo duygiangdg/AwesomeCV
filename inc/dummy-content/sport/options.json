@@ -1,0 +1,26 @@
+{
+	"top-bar": false,
+	"header": "split",
+	"right_column_width": "280",
+	"logo_img_width": "180",
+	"header_background": {
+		"background-color": "#000"
+	},
+	"header_color_scheme": "light",
+	"header-border": false,
+	"primary-color": "#c4162c",
+	"products_hover": "standard",
+	"menu_align": "center",
+	"text-font": {
+		"font-family": "Hind",
+		"google": true
+	},
+	"primary-font": {
+		"font-family": "Poppins",
+		"google": true
+	},
+	"post-titles-font": {
+		"font-family": "Poppins",
+		"google": true
+	}
+}

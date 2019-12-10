@@ -1,0 +1,397 @@
+
+@mixin clearfix() {
+	*zoom: 1;
+
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+// ------------------------------------------
+// Deprecated
+// Vendor prefix no longer required.
+// ------------------------------------------
+
+@mixin border_radius($radius: 4px) {
+	border-radius: $radius;
+}
+
+// ------------------------------------------
+// Deprecated
+// Vendor prefix no longer required.
+// ------------------------------------------
+
+@mixin border_radius_right($radius: 4px) {
+	border-top-right-radius: $radius;
+	border-bottom-right-radius: $radius;
+}
+
+// ------------------------------------------
+// Deprecated
+// Vendor prefix no longer required.
+// ------------------------------------------
+
+@mixin border_radius_left($radius: 4px) {
+	border-top-left-radius: $radius;
+	border-bottom-left-radius: $radius;
+}
+
+// ------------------------------------------
+// Deprecated
+// Vendor prefix no longer required.
+// ------------------------------------------
+
+@mixin border_radius_bottom($radius: 4px) {
+	border-bottom-left-radius: $radius;
+	border-bottom-right-radius: $radius;
+}
+
+// ------------------------------------------
+// Deprecated
+// Vendor prefix no longer required.
+// ------------------------------------------
+
+@mixin border_radius_top($radius: 4px) {
+	border-top-left-radius: $radius;
+	border-top-right-radius: $radius;
+}
+
+// ------------------------------------------
+// Deprecated
+// Vendor prefix no longer required.
+// ------------------------------------------
+
+@mixin opacity( $opacity: 0.75 ) {
+	opacity: $opacity;
+}
+
+// ------------------------------------------
+// Deprecated
+// Vendor prefix no longer required.
+// ------------------------------------------
+
+@mixin box_shadow($shadow_x: 3px, $shadow_y: 3px, $shadow_rad: 3px, $shadow_in: 3px, $shadow_color: #888) {
+	box-shadow: $shadow_x $shadow_y $shadow_rad $shadow_in $shadow_color;
+}
+
+// ------------------------------------------
+// Deprecated
+// Vendor prefix no longer required.
+// ------------------------------------------
+
+@mixin inset_box_shadow($shadow_x: 3px, $shadow_y: 3px, $shadow_rad: 3px, $shadow_in: 3px, $shadow_color: #888) {
+	box-shadow: inset $shadow_x $shadow_y $shadow_rad $shadow_in $shadow_color;
+}
+
+// ------------------------------------------
+// Deprecated
+// Vendor prefix no longer required.
+// ------------------------------------------
+
+@mixin text_shadow($shadow_x: 3px, $shadow_y: 3px, $shadow_rad: 3px, $shadow_color: #fff) {
+	text-shadow: $shadow_x $shadow_y $shadow_rad $shadow_color;
+}
+
+// ------------------------------------------
+// Deprecated
+// Vendor prefix no longer required.
+// ------------------------------------------
+
+@mixin vertical_gradient($from: #000, $to: #fff) {
+	background-color: $from;
+	background: -webkit-linear-gradient($from, $to);
+}
+
+// ------------------------------------------
+// Deprecated
+// Vendor prefix no longer required.
+// ------------------------------------------
+
+@mixin transition($selector: all, $animation: ease-in-out, $duration: .2s) {
+	transition: $selector $animation $duration;
+}
+
+// ------------------------------------------
+// Deprecated
+// Use bourbon mixin instead include transform(scale(1.5));
+// ------------------------------------------
+
+@mixin scale($ratio: 1.5) {
+	-webkit-transform: scale($ratio);
+	transform: scale($ratio);
+}
+
+// ------------------------------------------
+// Deprecated
+// Use bourbon mixin instead include box-sizing(border-box);
+// ------------------------------------------
+
+@mixin borderbox() {
+	box-sizing: border-box;
+}
+
+@mixin box-sizing($var-box: border-box) {
+	box-sizing: $var-box;
+}
+
+@mixin darkorlighttextshadow($a, $opacity: .8) {
+    @if lightness($a) >= 65% {
+        @include text_shadow(0, -1px, 0, rgba(0, 0, 0, $opacity));
+    } @else {
+        @include text_shadow(0, 1px, 0, rgba(255, 255, 255, $opacity));
+    }
+}
+
+// ------------------------------------------
+// Objects
+// ------------------------------------------
+
+@mixin menu() {
+	@include clearfix();
+
+	li {
+		display: inline-block;
+	}
+}
+
+@mixin mediaright() {
+	@include clearfix();
+
+	img {
+		float: right;
+		height: auto;
+	}
+}
+
+@mixin medialeft() {
+	@include clearfix();
+
+	img {
+		float: right;
+		height: auto;
+	}
+}
+
+@mixin ir() {
+	display: block;
+	text-indent: -9999px;
+	position: relative;
+	height: 1em;
+	width: 1em;
+}
+
+@mixin icon( $glyph: "\e001" ) {
+	font-family: 'WooCommerce';
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	margin: 0;
+	text-indent: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	content: $glyph;
+}
+
+@mixin iconbefore( $glyph: "\e001" ) {
+	font-family: 'WooCommerce';
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	margin-right: .618em;
+	content: $glyph;
+	text-decoration: none;
+}
+
+@mixin iconafter( $glyph: "\e001" ) {
+	font-family: 'WooCommerce';
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	margin-left: .618em;
+	content: $glyph;
+	text-decoration: none;
+}
+
+// ------------------------------------------------------------------------------------------------
+// WOOCOMMERCE EXTEND
+// ------------------------------------------------------------------------------------------------
+
+// ------------------------------------------
+// PRODUCT BRAND WITHOUT SHADOW AND FLOAT
+// ------------------------------------------
+
+// @extend %brand-without-float;
+
+%brand-without-float {
+
+	.basel-product-brands {
+		float:none;
+		margin-left: 0;
+
+		a {
+			min-height: 0;
+		    display: inline-block;
+		    border: none;
+		    background-color: transparent!important;
+		    padding: 0px;
+
+		    &:hover {
+		    	opacity: 0.5;
+			}
+		}
+
+		// img {
+		// 	@extend %brand-without-float-image-height;
+		// }
+	}
+}
+
+// // @extend %brand-without-float-image-height;
+
+// %brand-without-float-image-height {
+// 	max-height: 50px;
+// }
+
+// ------------------------------------------
+// FILTER SWATCH
+// ------------------------------------------ 
+
+//**** GENERAL STYLE ****//
+
+// @extend %filter-swatch-style;
+
+%filter-swatch-style {
+	display:inline-block;
+	margin-right: 10px;
+
+	> span {
+		position: relative;
+		display:inline-block;
+		margin-top: -2px;
+		border-radius:50%;
+		background-size: contain;
+		background-position: center center;
+		background-repeat: no-repeat;
+		vertical-align: middle;
+		-webkit-transition:all 0.2s ease;
+		transition:all 0.2s ease;
+
+		&[style^="background-image"],
+		&[style$="#ffffff;"] {
+			border: 1px solid rgba(0,0,0,0.15);
+		}
+	}
+}
+
+//****  SIZE SMALL OF SWATCH  ****//
+
+// @extend %swatch-style-small;
+
+%swatch-style-small {
+    width: 15px;
+    height: 15px;
+}
+
+// @extend %swatch-brand-style-small;
+
+%swatch-brand-style-small {
+    width: 45px;
+    height: 30px;
+}
+
+//****  SIZE NORMAL OF SWATCH  ****//
+
+// @extend %swatch-style-normal;
+
+%swatch-style-normal {
+    width: 25px;
+    height: 25px;
+}
+
+// @extend %swatch-brand-style-normal;
+
+%swatch-brand-style-normal {
+    width: 60px;
+    height: 30px;
+}
+
+//****  SIZE LARGE OF SWATCH  ****//
+
+// @extend %swatch-style-large;
+
+%swatch-style-large {
+    width: 35px;
+    height: 35px;
+}
+
+// @extend %swatch-brand-style-large;
+
+%swatch-brand-style-large {
+    width: 90px;
+    height: 40px;
+}
+
+// ---------------------------------
+// STYLE PAGES EMPTY CART AND COMPARE
+// ---------------------------------
+
+// @extend %basel-empty-page-style;
+
+%basel-empty-page-style {
+	position: relative;
+	margin-bottom: 30px;
+    padding: 250px 0 0px 0;    
+    color: #1B1919;
+    font-size: 36px;
+    // line-height: 1.5;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+	font-weight: bold!important; 	
+    
+    &:after,
+	&:before {
+        position: absolute;
+        left: 50%;
+        font-weight: normal;        
+        color:rgba(142, 142, 142, 0.2);  
+        -webkit-transform: translateX(-50%);
+		transform: translateX(-50%);
+		font-size: 180px;
+	}
+
+	&:before {
+		top:0px;
+		font-size: 180px;
+		font-family: 'Simple-Line-Icons';
+	}
+}
+
+// ---------------------------------
+// SELECT CARRET
+// ---------------------------------
+
+// @extend %select-caret-down;
+
+%select-caret-down {
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAHCAYAAAD9NeaIAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA+hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NDkxMSwgMjAxMy8xMC8yOS0xMTo0NzoxNiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDE1LTA0LTE3VDE3OjEyOjQyKzAyOjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxNS0wNC0yMFQxNzoxNjoyNCswMjowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAxNS0wNC0yMFQxNzoxNjoyNCswMjowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RTU4MjBDRURERjVCMTFFNEEzN0FCODBEM0I5MTExMjkiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RTU4MjBDRUVERjVCMTFFNEEzN0FCODBEM0I5MTExMjkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2RUVFRDJCNkREQzMxMUU0QTM3QUI4MEQzQjkxMTEyOSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpFNTgyMENFQ0RGNUIxMUU0QTM3QUI4MEQzQjkxMTEyOSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PuShL/sAAABeSURBVHjaYszOzjZnYGDYCcT8DMSBv0AcP2XKlKVEqmdgAuKTQOwOxB+JtQCIibYAZgkDkRaRZQGyJYQsItsCdEtwWUSRBdgsQbeIYgtAgAWHOMwiJSBezkAhAAgwAJSTG/DI0S9VAAAAAElFTkSuQmCC');
+}

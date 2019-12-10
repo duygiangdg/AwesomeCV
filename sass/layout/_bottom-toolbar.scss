@@ -1,0 +1,214 @@
+// ------------------------------------------------------------------------------------------------
+// BOTTOM TOOLBAR
+// ------------------------------------------------------------------------------------------------
+
+.basel-toolbar {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 350;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	overflow-x: auto;
+	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;
+	padding: 5px;
+	height: 55px;
+	background-color: white;
+	box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.12);
+
+	> a,
+	> div {
+		flex: 1 0 20%;
+	}
+	
+	> div a {
+		transition: none;
+	}
+
+	> a,
+	> div a,
+	.basel-burger-icon {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 30px;
+		text-decoration: none;
+
+		&:hover {
+			
+			.basel-toolbar-label {
+				color: rgba($body-color, .7);
+			}
+		}
+	}
+
+	//***** OFF-CANVAS SIDEBAR *****//
+
+	.basel-sticky-sidebar-opener {
+		display: none;
+		padding-right: 10px;
+		padding-left: 10px;
+
+		svg {
+			height: 19px;
+			margin: 0 !important;
+		}
+
+		&:after {
+			height: 20px;
+			font-size: 19px;
+			line-height: 1;
+			margin: 0;
+		}
+	}
+
+	//***** LABEL SHOW OPTION *****//
+
+	&.basel-toolbar-label-show {
+
+		> a,
+		> div a,
+		.basel-burger-icon {
+			padding-bottom: 15px;
+			height: 45px;
+		}
+
+		.basel-toolbar-label {
+			display: block;
+		}
+	}
+}
+
+//***** HOME, BLOG, SHOP TOOLBAR LABEL *****//
+
+.basel-toolbar-label {
+	position: absolute;
+	right: 10px;
+	bottom: 5px;
+	left: 10px;
+	display: none;
+	overflow: hidden;
+	text-align: center;
+	text-overflow: ellipsis;
+	font-weight: 600;
+	font-size: 11px !important; // NOTE overwright header icons style
+	line-height: 1 !important;
+	transition: all .25s ease;
+	white-space: nowrap;
+}
+
+.basel-toolbar-item {
+
+	> a {
+		padding-right: 10px;
+		padding-left: 10px;
+		color: $body-color;
+		line-height: 1;
+
+		&:before {
+			display: inline-block;
+			font-weight: 400;
+			font-style: normal;
+			font-size: 19px;
+			font-family: 'Simple-Line-Icons';
+		}
+	}
+}
+
+.basel-toolbar-shop {
+
+	> a {
+
+		&:before {
+			content: "\e06a";
+		}
+	}
+}
+
+.basel-toolbar-blog {
+
+	> a {
+
+		&:before {
+			content: "\e04c";
+		}
+	}
+}
+
+.basel-toolbar-home {
+
+	a {
+
+		&:before {
+			content: "\e069";
+		}
+	}
+}
+
+.basel-toolbar-compare {
+
+	a {
+
+		&:before {
+			content: "\e098";
+		}
+	}
+
+	.compare-count {
+		padding: 0;
+		width: 15px;
+		height: 15px;
+		line-height: 15px;
+		text-align: center;
+		border-radius: 50%;
+		background-color: #1aada3;
+		overflow: hidden;
+		position: absolute;
+		z-index: 1;
+		font-size: 10px;
+		color: white;
+		top: -2px;
+		left: calc(50% + 12px);
+		transform: translateX(-50%);
+	}
+}
+
+.basel-toolbar-account {
+
+	a {
+
+		&:before {
+			content: "\e005";
+		}
+	}
+}
+
+//***** CUSTOM LINK TOOLBAR LABEL *****//
+
+.basel-toolbar-link {
+
+	&:not(.basel-with-icon) {
+
+		> a {
+
+			&:before {
+				content: "\e09a";
+				font-family: 'Simple-Line-Icons';
+			}
+		}
+	}
+}
+
+.basel-toolbar-icon {
+	display: inline-block;
+	transition: all .25s ease;
+
+	img {
+		width: auto;
+		height: 20px;
+	}
+}

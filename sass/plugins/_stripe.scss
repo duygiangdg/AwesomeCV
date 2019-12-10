@@ -1,0 +1,35 @@
+
+// --------------------------------------------------------------------------------------------
+// STRIPE
+// --------------------------------------------------------------------------------------------
+
+.woocommerce-checkout #payment,
+#add_payment_method {
+
+	ul {
+	
+		&.payment_methods {
+			
+			li {
+				
+				img {
+					
+					&.stripe-icon {
+						float: none !important;
+					}
+				}
+			}
+		}
+	}
+
+	input#payment_method_stripe {
+		top: 5px;
+	}
+}
+
+#add_payment_method {
+
+	#payment_method_stripe {
+		margin: 0;
+	}
+} 

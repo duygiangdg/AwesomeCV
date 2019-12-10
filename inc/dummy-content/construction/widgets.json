@@ -1,0 +1,43 @@
+{
+  "sidebar-475": {
+    "widgets": {
+      "pi_simpletwittertweets": {
+        "title": "",
+        "name": "TataSteelConstr",
+        "numTweets": "2",
+        "cacheTime": "100",
+        "consumerKey": "S6kU5b4RcOj0ImsNCoXDBbcou",
+        "consumerSecret": "VoabFR670SRJFoqyl4xezJjayV77IDvWg2rn7M1wYnIgr4CIwW",
+        "accessToken": "273402566-iG3x1mejOXB081J853qsfkYZMCH68fcoSIDHTuKp",
+        "accessTokenSecret": "rmVZ49BJJyVCAA0ieTKe2pHPWPAPbVXc9X8vEJtC00cgq",
+        "exclude_replies": "on",
+        "twitterFollow": null,
+        "dataShowCount": null,
+        "dataShowScreenName": null,
+        "dataLang": "en",
+        "timeRef": null,
+        "timeAgo": "true",
+        "twitterIntents": null,
+        "twitterIntentsText": null,
+        "intentColor": "#999999",
+        "showAvatar": null,
+        "roundCorners": null,
+        "avatarSize": "",
+        "autoplay": "9000",
+        "slider": null
+      }
+    },
+    "flush": true
+  },
+  "sidebar-776": {
+    "widgets": {
+      "rpwe_widget": {
+        "title": "",
+        "thumb_height": 55,
+        "thumb_width": 75,
+        "offset": 2
+      }
+    },
+    "flush": true
+  }
+}

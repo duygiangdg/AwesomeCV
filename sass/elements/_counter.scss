@@ -1,0 +1,47 @@
+
+// --------------------------------------------------------------------------------------------
+// COUNTER
+// --------------------------------------------------------------------------------------------
+
+.basel-counter {
+    text-align:center;
+
+    > span {
+        display: inline-block;
+        width:100%;
+        font-size:18px;
+    }
+
+    .counter-value {
+        margin-bottom: 20px;
+        font-weight: 600;
+    }
+
+    .color-scheme-light & {
+
+        > span {
+            color:white;
+        }
+    }
+
+    &.counter-small {
+
+        .counter-value {
+            font-size: 24px;
+        }
+    }
+
+    &.counter-default {
+
+        .counter-value {
+            font-size: 36px;
+        }
+    }
+
+    &.counter-large {
+
+        .counter-value {
+            font-size: 52px;
+        }
+    }
+}

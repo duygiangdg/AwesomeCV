@@ -1,0 +1,87 @@
+// ------------------------------------------------------------------------------------------------
+// GUTENBERG
+// ------------------------------------------------------------------------------------------------
+
+.wp-block-gallery,
+.wp-block-latest-posts.is-grid {
+	padding-left: 0 !important;
+
+	> li {
+
+		&:before {
+			display: none;
+		}
+	}
+}
+
+// ------------------------------------------
+// BLOCK SEPARATOR
+// ------------------------------------------
+
+.wp-block-separator {
+	width: 35px;
+
+	&.is-style-wide,
+	&.is-style-dots {
+		width: 100%;
+	}
+}
+
+// ------------------------------------------
+// BLOCK IMAGE
+// ------------------------------------------
+
+.wp-block-image {
+
+	.alignleft,
+	&.alignleft {
+		margin-right: 25px;
+	}
+
+	.alignright,
+	&.alignright {
+		margin-left: 25px;
+	}
+}
+
+// ------------------------------------------
+// BLOCK QUOTE
+// ------------------------------------------
+
+.wp-block-quote {
+	
+	&.is-large {
+		border: none;
+	}
+}
+
+// ------------------------------------------
+// BLOCK PULLQUOTE
+// ------------------------------------------
+
+.wp-block-pullquote {
+
+	blockquote {
+		border: none;
+		padding-left: 0;
+		margin-bottom: 0;
+		text-align: center;
+	}
+
+	&:not(.is-style-solid-color) {
+		border-width: 2px 0 2px 0;
+		border-style: solid;
+	}
+}
+
+// ------------------------------------------
+// BLOCK ARCHIVES AND CATEGORIES
+// ------------------------------------------
+
+.wp-block-archives,
+.wp-block-categories {
+
+	&.aligncenter {
+		text-align: center;
+	}
+}

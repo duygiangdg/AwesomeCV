@@ -1,0 +1,305 @@
+
+// --------------------------------------------------------------------------------------------
+// AJAX-PRODUCTS-TABS
+// --------------------------------------------------------------------------------------------
+
+.basel-products-tabs {
+
+	//SLIDER ARROWS
+
+	.owl-carousel {
+		position: static;
+
+		.owl-nav {
+			position: absolute;
+			top: -67px;
+			right: 0px;
+			opacity: 0;
+
+			animation:fade-in 0.5s ease 0.2s forwards;
+			-webkit-animation:fade-in 0.5s ease 0.2s forwards;
+	
+			div {
+				position: static;
+				visibility: visible;
+				opacity: 1;
+				transform: none;
+				-webkit-transform: none;
+
+				&.disabled {
+					color: rgba(0, 0, 0, 0.5);
+					cursor: default;
+				}
+
+				&:before {
+					font-weight: bold;
+					width: 30px;
+					font-size: 14px;
+					height: 45px;
+					line-height: 45px;
+				}
+			}
+		}
+	}
+
+	//AJAX ARROWS
+
+	.pagination-arrows + .products-footer {
+		position: absolute;
+		top: -67px;
+		right: 0px;
+		display: block;
+		opacity: 0;
+
+		animation:fade-in 0.5s ease 0.2s forwards;
+		-webkit-animation:fade-in 0.5s ease 0.2s forwards;
+	}
+
+	.basel-products-load-prev, 
+	.basel-products-load-next {
+		position: static;
+		opacity: 1;
+		visibility: visible;
+		margin-top: 0;
+		width: 30px;
+		transform: none;
+		-webkit-transform: none;
+		transition: color .2s;
+		-webkit-transition: color .2s;
+
+		&.disabled {
+			color: rgba(0, 0, 0, 0.5);
+		}
+
+		&:after {
+			display: block;
+			font-weight: bold;
+			font-size: 14px;
+			height: 45px;
+			line-height: 45px;
+		}
+	}
+
+	.basel-tabs-header {
+		display: flexbox;
+		display: flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		flex-direction: row;
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		align-items: flex-end;
+		-webkit-align-items: flex-end;
+		-ms-align-items: flex-end;
+		border-bottom: 3px solid;
+		margin-bottom: 20px;
+	}
+	
+	.tabs-name {
+		flex:0 0 auto;
+		-webkit-flex:0 0 auto;
+		-ms-flex:0 0 auto;
+		padding-left: 20px;
+		padding-right: 20px;
+		margin-bottom: -3px;
+		text-transform: uppercase;
+		line-height: 45px;
+		height: 45px;
+		font-size: 14px;
+		font-weight: 600;
+		color: white;
+	
+		img {
+		    max-height: 22px;
+		    margin-right: 8px;
+		    width: auto;
+		}
+	}
+
+	.open-title-menu {
+		display: none;
+		height: 45px;
+		line-height: 45px;
+		padding-left: 15px;
+		padding-right: 15px;
+		text-transform: uppercase;
+		font-size: 14px;
+		color:$heading-color;
+		font-weight: 600;
+		cursor: pointer;
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+
+		&:before {
+		    content: "\f0c9";
+		    display: inline-block;
+		    font-weight: 400;
+		    margin-right: 8px;
+		    font-size: 16px;
+		    margin-top: -2px;
+		    vertical-align: middle;
+		    font-family: 'FontAwesome';
+		}
+	}
+	
+	.tabs-navigation-wrapper {
+		flex: 1 0 0;
+		-webkit-flex: 1 0 0;
+		-ms-flex: 1 0 0;
+		position: relative;
+		padding-right: 65px;
+		margin-bottom: -3px;
+	}
+	
+	.products-tabs-title {
+		display: flexbox;
+		display: flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		flex-direction: row;
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		align-items: stretch;
+		-webkit-align-items: stretch;
+		-ms-flex-align: stretch;
+		flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+	
+		li {
+			line-height: 45px;
+			height: 45px;
+			padding-left: 12px;
+			padding-right: 12px;
+			cursor: pointer;
+			text-transform: uppercase;
+			font-size: 14px;
+			font-weight: 600;
+			color:$heading-color;
+			transition: 
+				color .2s ease,
+				opacity .2s ease;
+			-webkit-transition: 
+				color .2s ease,
+				opacity .2s ease;
+
+			&:not(.active-tab-title):hover {
+				opacity: 0.6;
+				color:$heading-color;
+			}
+		}
+	}
+
+	// BASEL PRODUCT ELEMENT
+
+	.basel-products-element {
+
+		&.element-loading {
+
+			.basel-products-loader {
+
+				&.hidden-loader {
+					opacity: 1;
+					visibility: visible;
+
+			    	&:after {
+						// opacity: 1;
+			    		// visibility: visible;
+			    		@include act-loader;
+			    	}
+			    }
+			}
+		}
+	}
+
+	// LOADER ON TABS
+	
+	> .basel-products-loader {
+		transition: 
+			opacity 0.1s ease,
+			visibility 0.1s ease;
+			-webkit-transition: 
+			opacity 0.1s ease,
+			visibility 0.1s ease;
+
+		&:after {
+			// transition: 
+			// 	opacity 0.1s ease,
+			// 	visibility 0.1s ease;
+			// 	-webkit-transition: 
+			// 	opacity 0.1s ease,
+			// 	visibility 0.1s ease;
+		}
+	}
+
+
+	//SHOW LOADER
+
+	.basel-products-loader {
+		position: absolute;
+		top: 180px;
+		left: 50% !important; // need to rewrite position left
+
+		&:after {
+			// position: absolute;
+			// top: 180px;
+		}
+	}
+	
+	//TAB SWITCH ANIMATION
+	
+	.basel-tab-content {
+		position: relative;
+		transition: 
+			transform 0.2s ease,
+			opacity 0.2s ease,
+			visibility 0.2s ease;
+		-webkit-transition: 
+			transform 0.2s ease,
+			opacity 0.2s ease,
+			visibility 0.2s ease;
+
+		transform: translateY(0px);
+		-webkit-transform: translateY(0px);
+	
+		&.loading {
+			opacity: 0;
+			visibility: hidden;
+		
+			transform: translateY(40px);
+			-webkit-transform: translateY(40px); 
+	
+			.owl-nav,
+			.pagination-arrows + .products-footer {
+				display: none;
+			}
+		}
+	}
+
+	&.element-loading {
+
+		> .basel-products-loader {
+			opacity:1;
+			visibility: visible;
+			transition: 
+				opacity 0.3s ease,
+				visibility 0.3s ease;
+			-webkit-transition: 
+				opacity 0.3s ease,
+				visibility 0.3s ease;
+
+			&:after {
+		        // opacity:1;
+		        // visibility: visible;
+				// transition: 
+				// 	opacity 0.3s ease,
+				// 	visibility 0.3s ease;
+				// -webkit-transition: 
+				// 	opacity 0.3s ease,
+				// 	visibility 0.3s ease;
+				@include act-loader;
+			}
+		}
+	}
+}

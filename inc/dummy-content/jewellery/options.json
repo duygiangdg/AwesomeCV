@@ -1,0 +1,17 @@
+{
+	"site_width": "boxed",
+	"header": "logo-center",
+	"menu_align": "center",
+	"primary-color": "#31262a",
+	"top-bar-bg":{
+		"background-color":"#31262a"
+	},
+	"primary-font": {
+		"font-family": "Lora",
+		"google": true
+	},
+	"post-titles-font": {
+		"font-family": "Lora",
+		"google": true
+	}
+}

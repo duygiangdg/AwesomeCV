@@ -1,0 +1,14 @@
+{
+	"header": "simple",
+	"menu_align": "center",
+	"primary-font": {
+		"font-family": "Dosis",
+		"google": true,
+		"font-weight": 600
+	},
+	"post-titles-font": {
+		"font-family": "Dosis",
+		"google": true,
+		"font-weight": 600
+	}
+}

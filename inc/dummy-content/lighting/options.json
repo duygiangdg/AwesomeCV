@@ -1,0 +1,51 @@
+{
+	"top-bar": true,
+	"top-bar-bg": {
+		"background-color": "#3c2b86"
+	},
+	"header_background": {
+		"background-color": "#090909"
+	},
+	"header_area": "[html_block id=\"1214\"]",
+	"header" : "logo-center",
+	"header_color_scheme" : "light",
+	"header_full_width" : false,
+	"menu_align" : "center",
+	"primary-color" : "#3c2b86",
+	"header-border" : false,
+	"header-overlap": false,
+	"shopping_cart" : 2,
+	"shopping_icon_alt" : false,
+	"header_search" : "full-screen",
+	"cart_position" : "side",
+	"products_hover" : "base",
+	"text-font" : {
+		"font-family" : "Chivo",
+		"google" : true,
+		"font-weight" : 400
+	},
+	"primary-font" : {
+		"font-family" : "Roboto Mono",
+		"google" : true,
+		"font-weight" : 400,
+		"color" : "#353435"
+	},
+	"post-titles-font" : {
+		"font-family" : "Roboto Mono",
+		"google" : true,
+		"font-weight" : 500,
+		"color" : "#353435"
+	},
+	"navigation-font" : {
+		"font-family" : "Chivo",
+		"google" : true,
+		"font-size" : "13px",
+		"font-weight" : 400
+	},
+	"secondary-font" : {
+		"font-family" : "Chivo",
+		"google" : true,
+		"font-weight" : 400,
+		"color" : "#D7A273"
+	}
+}

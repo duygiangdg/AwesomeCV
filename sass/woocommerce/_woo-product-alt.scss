@@ -1,0 +1,141 @@
+
+// --------------------------------------------------------------------------------------------
+// SINGLE PRODUCT PAGE - ALTERNATIVE
+// --------------------------------------------------------------------------------------------
+
+.product-design-alt {
+
+	.product-image-summary {
+		margin-bottom: 50px;
+	}
+
+	.entry-summary {
+		text-align: center;
+
+		@extend %brand-without-float;
+
+		.yith-wcwl-add-to-wishlist {
+		    // margin-bottom: 20px;
+		    margin-top:0;
+		    padding-top:0px;
+		    border:none;
+		}
+	}
+
+	.product_meta {
+		border-top:none;
+		display: inline-block;
+		padding: 15px;
+		background-color: #F9F9F9;
+
+		> span {
+			display: inline-block;
+			margin: 0 10px;
+			font-weight: bold;
+			line-height: 2;
+		}
+	}
+
+	.product-tabs-wrapper {
+		margin: 0 -15px 0px;
+		background-color: #F9F9F9;
+		padding: 40px 0;
+	}
+
+	.product-share {
+		margin-bottom: 50px;
+		text-align: center;
+	}
+	
+	.tabs {
+		text-align: center;
+	}
+
+	// .cart {
+
+	// 	&.variations_form {
+	// 		width:100%;
+
+	// 		+ .yith-wcwl-add-to-wishlist {
+
+	// 			+ .clear {
+
+	// 				+ .product_meta {
+	// 					padding-top:15px;
+	// 				}
+
+	// 				+ .compare-btn-wrapper {
+
+	// 					+ .product_meta {
+	// 						padding-top:15px;
+	// 					}
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// }
+
+	.single_variation_wrap {
+		padding-top:25px;
+	}
+
+	.single_variation {
+
+		.woocommerce-variation-price,
+		.woocommerce-variation-availability {
+			float: none;
+			display: inline;
+		}
+
+		.price {
+			vertical-align: bottom;
+		}
+
+		.out-of-stock,
+		.in-stock,
+		.price {
+			margin-left: 7px;
+			margin-right: 7px;
+		}
+	}
+
+	.variations {
+		margin-bottom:0;
+
+		td {
+			text-align:center;
+
+			&.label {
+				display:none;
+			}
+		}
+
+		.reset_variations {
+			margin-right: -54px;
+		}
+	}
+
+	&.product-type-variable {
+
+		.variations_form {
+			width: 100%;
+			padding-bottom: 0;
+			border-bottom: none;
+		}
+
+		.product_meta {
+			padding-top:15px;
+		}
+	}
+}
+
+// .product-type-grouped {
+
+// 	.entry-summary {
+
+// 		.yith-wcwl-add-to-wishlist {
+// 			margin-bottom: 10px;
+// 			margin-right: 0px;
+// 		}
+// 	}
+// }

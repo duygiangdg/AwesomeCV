@@ -1,0 +1,15 @@
+{
+	"top-bar": false,
+	"header": "shop",
+	"sticky_footer": true,
+	"menu_align": "left",
+	"text-font": {
+		"font-family": "Lato",
+		"google": true
+	},
+	"navigation-font": {
+		"font-family": "Lato",
+		"google": true,
+		"font-weight": 600
+	}
+}

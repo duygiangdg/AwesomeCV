@@ -1,0 +1,32 @@
+{
+	"top-bar": false,
+	"products_hover": "quick",
+	"primary-color": "#98cb4c",
+	"site_width": "full-width",
+	"header": "shop",
+	"menu_align": "left",
+	"text-font": {
+		"font-family": "Droid Sans",
+		"google": true
+	},
+	"primary-font": {
+		"font-family": "Inika",
+		"google": true
+	},
+	"post-titles-font": {
+		"font-family": "Inika",
+		"google": true
+	},
+	"secondary-font": {
+		"font-family": "Karla",
+		"google": true
+	},
+	"widget-titles-font": {
+		"font-family": "Inika",
+		"google": true
+	},
+	"navigation-font": {
+		"font-family": "Karla",
+		"google": true
+	}
+}

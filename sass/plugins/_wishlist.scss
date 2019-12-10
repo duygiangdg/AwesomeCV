@@ -1,0 +1,206 @@
+
+// --------------------------------------------------------------------------------------------
+// WISHLIST
+// --------------------------------------------------------------------------------------------
+
+.yith-wcwl-add-to-wishlist {
+	display:block;
+	margin-top:0;
+
+		i {
+			display: none; //hide font-awesome icon
+		}
+
+		a {
+			display: inline-block;
+			vertical-align: middle;
+			text-align: center;
+			font-size: 14px;
+			line-height: 1.5;
+			color:#4E4E4E;
+
+			&:hover,
+            &:focus {
+				text-decoration:none;
+			}
+
+            &:before {
+				content: "\e08a";
+			    font-size: 18px;
+			    vertical-align: middle;
+			    margin-right: 2px;
+			    display: inline-block;
+			    font-family: 'Simple-Line-Icons';
+			    -webkit-transition: all 0.2s;
+			    -moz-transition: all 0.2s;
+			    -o-transition: all 0.2s;
+			    transition: all 0.2s;
+			}
+
+			&:after {
+				@include loader(15px);
+				margin-left: 10px;
+	           	opacity:0;
+	           	visibility:hidden;
+        	}
+		}
+
+		.ajax-loading {
+			display: none!important;
+			height: 0!important;
+			width: 0!important;
+		}
+
+        .feedback {
+            display: none;
+        }
+
+	.yith-wcwl-add-button {
+
+
+		&.feid-in {
+
+			a {
+				&:after {
+		           	opacity:1;
+		           	visibility:visible;
+		           	@include act-loader;
+        		}
+			}
+		}
+	}
+
+	.clear {
+		display: none;
+	}
+
+	+ .clear {
+		display: none;
+	}
+}
+
+// ------------------------------------------
+// WISHLIST IN HOVER EFFECT
+// ------------------------------------------
+
+.basel-buttons {
+
+	.yith-wcwl-add-to-wishlist {
+
+	    margin-bottom: 0;
+		-webkit-transition:all 0.25s ease-in-out;
+		-moz-transition:all 0.25s ease-in-out;
+		-o-transition:all 0.25s ease-in-out;
+		transition:all 0.25s ease-in-out;
+
+	    @include tooltip-position(50%, 135%, auto, auto, 0px, -50%);
+	    @include tooltip-icon(50%, auto, auto, 99%, 0, -50%, "\f0da");
+	    @include tooltip-hover(50%, 115%, auto, auto);
+
+	    a {
+	        font-size: 0;
+	        width: 35px;
+	        height: 35px;
+	        line-height: 35px;
+	        color: rgba(0, 0, 0, 0.9);
+
+			&:before {
+	            font-size: 18px;	
+	        }
+
+	        &:after {
+	            margin-left: 0px;
+	            width:18px;
+	            height:18px;
+	            display:none;	
+	        }
+	    }
+
+	    .yith-wcwl-wishlistaddedbrowse,
+		.yith-wcwl-wishlistexistsbrowse {
+
+			> a {
+				color: $primary-color;
+
+				&:hover {
+					color: $primary-color;
+				}
+		    }
+		}
+
+	    .yith-wcwl-add-button {
+
+	        &.feid-in {
+
+	            > a {
+
+	                &:before {
+	                	display:none;	
+	            	}
+
+		            &:after {
+		                margin-left: 0px;
+		                display:inline-block;	
+		            }
+	            }
+			}
+	    }
+	}
+}
+
+.product-grid-item:not(.basel-hover-base) {
+
+	.yith-wcwl-add-to-wishlist {
+	    opacity: 0;
+		visibility: hidden;
+		transform: scale(0);
+		-webkit-transform: scale(0);
+		-moz-transform: scale(0);
+		-o-transform: scale(0);
+		-ms-transform: scale(0);
+		-sand-transform: scale(0);
+	}
+
+	&:hover > .product-element-top .yith-wcwl-add-to-wishlist {
+		opacity: 1;
+		visibility: visible;
+		transform: scale(1);
+		-webkit-transform: scale(1);
+		-moz-transform: scale(1);
+		-o-transform: scale(1);
+		-ms-transform: scale(1);
+		-sand-transform: scale(1);
+	}
+}
+ 
+.basel-hover-button,
+.basel-hover-info {
+
+	.yith-wcwl-add-to-wishlist { 
+
+		a {
+			color:white;
+
+			&:hover {
+				color: rgba(255, 255, 255, 0.9);
+			}
+
+			&:after {
+				border-color:white;
+			}
+		}
+	}
+}
+
+.yith-wcwl-share {
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+// ------------------------------------------
+// MESSAGE POPUP
+// ------------------------------------------
+
+#yith-wcwl-popup-message {
+	display: none!important;
+}

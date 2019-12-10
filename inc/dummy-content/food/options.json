@@ -1,0 +1,33 @@
+{
+	"primary-color": "#c8a76c",
+	"header": "shop",
+	"site_width": "full-width",
+	"top-bar": false,
+	"products_hover": "link",
+	"sticky_footer": true,
+	"text-font": {
+		"font-family": "Hind",
+		"google": true
+	},
+	"primary-font": {
+		"font-family": "Crimson Text",
+		"google": true
+	},
+	"post-titles-font": {
+		"font-family": "Crimson Text",
+		"google": true
+	},
+	"secondary-font": {
+		"font-family": "Italianno",
+		"google": true
+	},
+	"widget-titles-font": {
+		"font-family": "Crimson Text",
+		"google": true
+	},
+	"navigation-font": {
+		"font-family": "Hind",
+		"google": true,
+		"font-weight": 600
+	}
+}

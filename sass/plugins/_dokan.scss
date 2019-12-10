@@ -1,0 +1,265 @@
+
+// --------------------------------------------------------------------------------------------
+// DOKAN
+// --------------------------------------------------------------------------------------------
+
+// ------------------------------------------
+// DOKAN WIDGETS
+// ------------------------------------------
+
+.dokan-widget-area {
+
+    .widget {
+        margin-bottom: 50px;
+    }
+
+}
+
+.dokan-category-menu {
+
+    .sub-category {
+        margin-top: 15px;
+        margin-left: 20px;
+
+        a {
+            color: rgba(0, 0, 0, 0.6);
+        }
+
+        h3 {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            position: relative;
+
+            &:before {
+                position: absolute;
+                top: 0;
+                left: -12px;
+                content: "\f105";
+                display: inline-block;
+                font-family: "FontAwesome";
+                font-size: 12px;
+                line-height: 18px;
+                color: rgba(0, 0, 0, 0.6);
+            }
+        }
+
+        .sub-block {
+            position: relative;
+            margin-bottom: 15px;
+
+            &:before {
+                position: absolute;
+                top: 0;
+                left: -12px;
+                content: "\f105";
+                display: inline-block;
+                font-family: "FontAwesome";
+                font-size: 12px;
+                line-height: 18px;
+                color: rgba(0, 0, 0, 0.6);
+            }
+        }
+
+        .children {
+            margin-top: 15px;
+            margin-left: 20px;
+        }
+    }
+}
+
+.dokan-feature-seller-widget,
+.dokan-best-seller-widget {
+
+    ul {
+
+        li {
+            display: flexbox;
+            display: flex;
+            display: -webkit-flex;
+            display: -ms-flex;
+            flex-direction: row;
+            -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+            align-items: center;
+            -webkit-align-items: center;
+            -ms-align-items: center;
+
+            a {
+                flex-grow: 1;
+                -webkit-flex-grow: 1;
+                -ms-flex-grow: 1;
+                padding-right: 10px;
+            }
+
+            i {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+// ------------------------------------------
+// DOKAN SINGLE PAGE
+// ------------------------------------------
+
+.dokan-single-store {
+
+    .profile-frame {
+
+        .profile-info-box {
+
+            .profile-info {
+        
+                i {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+
+.single-product-content {
+    #tab-seller {
+        .seller-rating {
+            position: relative;
+            top: 5px;
+        }
+    }
+}
+
+.dokan-rating {
+    .star-rating {
+        letter-spacing: 0px;
+
+        span {
+            &:before {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+// ------------------------------------------
+// DOKAN REGISTRATION FORM
+// ------------------------------------------
+
+.dokan-theme-basel {
+
+    .basel-registration-page {
+
+        .user-role {
+            margin-bottom: 0;
+
+            input {
+                position: static;
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+// ------------------------------------------
+// DOKAN SELLER SEARCH FORM
+// ------------------------------------------
+
+.dokan-seller-listing {
+
+    .dokan-seller-search-form {
+    
+        > label {
+            display: inline-block;
+            margin-bottom: 0;
+            margin-right: 10px;
+        }
+    
+        // .screen-reader-text {
+        //     display: none;
+        // }
+        
+        .search-field {
+            padding-left: 10px;
+            padding-right: 10px;
+            border: 1px solid rgba(129, 129, 129, 0.25);
+            font-size: 14px;
+            line-height: 18px;
+            padding: 10px 15px;
+            transition: border-color .5s;
+            -webkit-transition: border-color .5s;
+    
+            &:focus {
+                outline: none;
+                border-color: rgba(0, 0, 0, 0.6);
+            }
+        }
+    
+        .search-submit {
+            vertical-align: middle;
+        }
+    }
+}
+
+// ------------------------------------------
+// DOKAN DASHBOARD
+// ------------------------------------------
+
+.dokan-dashboard-wrap {
+    margin-bottom: 20px;
+
+    input {
+        border-radius: 0;
+    }
+
+    input[type="number"] {
+        padding-left: 10px;
+        box-shadow: none;
+    }
+}
+
+.dokan-dashboard-menu {
+    
+    .settings {
+
+        i {
+            padding-top: 5px;
+        }
+    }
+}
+
+.dokan-order-filter-serach,
+.dokan-report-wrap {
+
+    .dokan-form-group {
+        display: flexbox;
+        display: flex;
+        display: -webkit-flex;
+        display: -ms-flex;
+        flex-direction: row;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        align-items: center;
+        -webkit-align-items: center;
+        -ms-align-items: center;
+
+        label {
+            margin-bottom: 0;
+        }
+
+        input {
+            margin-left: 5px;
+        }
+
+        .datepicker {
+            padding: 5px 10px;
+        }
+    }
+}
+
+.dokan-comments-wrap {
+
+    select {
+        margin-bottom: 15px;
+    }
+}

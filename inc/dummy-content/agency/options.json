@@ -1,0 +1,33 @@
+{
+	"top-bar": true,
+	"header_full_width": true,
+	"sricky_footer": false,
+	"header": "simple",
+	"primary-color": "#03a9f5",
+	"header_search": "disable",
+	"header_wishlist": false,
+	"right_column_width": 0,
+	"shopping_cart": "disable",
+	"menu_align": "right",
+	"top-bar-bg": {
+		"background-color": "#03A9F5"
+	},
+
+	"text-font": {
+		"font-family": "Lato",
+		"google": true
+	},
+	"primary-font": {
+		"font-family": "Roboto",
+		"google": true
+	},
+	"post-titles-font": {
+		"font-family": "Roboto",
+		"google": true
+	},
+	"navigation-font": {
+		"font-family": "Roboto",
+		"google": true,
+		"font-weight": 500
+	}
+}

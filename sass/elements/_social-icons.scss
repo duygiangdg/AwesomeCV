@@ -1,0 +1,302 @@
+
+// --------------------------------------------------------------------------------------------
+// SOCIAL ICONS 
+// --------------------------------------------------------------------------------------------
+
+.widget_text .social-icons {
+    padding-left: 0px;
+    margin-bottom: 0px;
+
+    li {
+        margin:5px 5px 0 5px;
+        
+        &:before {
+            content: none;
+        }
+    }
+}
+
+.social-icons {
+    display: block;
+
+    a {
+        color: rgba(0, 0, 0, 0.6);
+
+        &:hover {
+            color: rgba(0, 0, 0, 0.8);
+        }
+    }
+
+    li {
+        display: inline-block;
+        margin:5px 5px 0 5px;
+        padding: 0;
+
+        a {
+           font-size: 0px;  
+        }
+
+        i {
+            font-size:18px;
+        }
+
+        &:first-child {
+            margin-left: 0px;
+            padding-left: 0px;
+        }
+
+        &:last-child {
+            margin-right: 0px;
+            padding-right: 0px;
+        }   
+    }
+
+    // ------------------------------------------
+    // TITLE STYLE
+    // ------------------------------------------
+
+    &.icons-design-circle,
+    &.icons-design-colored,
+    &.icons-design-colored-alt {
+        @include social-icons;
+    }
+
+    &.icons-design-colored {
+        @include social-icons-active-color;
+    }
+
+    &.icons-design-colored-alt {
+        @include social-icons-hover-color;
+    }
+
+    // ------------------------------------------
+    // TITLE SIZE
+    // ------------------------------------------
+
+    &.icons-size-small {
+
+        li {
+
+            i {
+                font-size:14px;
+            }
+        }
+
+        &.icons-design-circle,
+        &.icons-design-colored,
+        &.icons-design-colored-alt {
+
+            li {
+                width:30px;
+                height:30px;
+
+                i {
+                    line-height:30px;
+                }
+            }
+        }
+    }
+
+    &.icons-size-large {
+
+        li {
+
+            i {
+                font-size:22px;
+            }
+        }
+
+        &.icons-design-circle,
+        &.icons-design-colored,
+        &.icons-design-colored-alt {
+            
+            li {
+                width:60px;
+                height:60px;
+
+                i {
+                    line-height:60px;
+                }
+            }
+        }
+    }
+
+    .color-scheme-light & {
+
+        &.icons-design-colored {
+
+            li {
+
+                a {
+                    color:white;
+                }
+            }
+        }
+
+        &.icons-design-circle,
+        &.icons-design-colored-alt {
+
+            li {
+
+                a {
+                    color:#8f8f8f;
+
+                    &:hover {
+                        color:#ffffff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ------------------------------------------
+// STIKY SOCIAL BUTTONS
+// ------------------------------------------ 
+
+.basel-sticky-social {
+    position: fixed;
+    top:50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    z-index: 399;
+
+    -webkit-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
+
+    .basel-social-icon-name {
+        white-space: nowrap;
+        max-width: 0;
+        padding: 0;
+        overflow: hidden;
+        font-size: 14px;
+        font-weight: 600;
+
+        -webkit-transition: 
+            padding 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.15), 
+            max-width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.15);
+        transition: 
+            padding 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.15), 
+            max-width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.15);
+    }
+
+    li[class^="social"] {
+        display: block;
+        width: auto;
+        border-radius: 0;
+        margin:0!important;
+
+        a {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -ms-flex-wrap:nowrap;
+            flex-wrap:nowrap;
+            overflow: hidden;
+            width:auto;
+            min-width: 40px;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        i {
+            width:40px;
+        }
+
+        &:hover {
+
+            .basel-social-icon-name {
+                max-width: 220px;               
+            }
+        }
+    }
+
+    &.icons-design-colored {
+
+        li[class^="social"] {
+
+            a {
+                
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &:not(.icons-design-default) {
+
+        li[class^="social"] {
+
+            a {
+                width:auto;
+                height: 40px;
+            }
+
+            i {
+                line-height: 40px;
+            }
+        }
+    }
+
+    .document-ready & {
+        -webkit-transform:translate3d(0,-50%,0);
+        transform:translate3d(0,-50%,0);        
+    }
+}
+
+.basel-sticky-social-right {
+    right: 0;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -webkit-transform:translate3d(100%,-50%,0);
+    transform:translate3d(100%,-50%,0);   
+
+    li[class^="social"] {
+
+        a {
+            flex-direction: row-reverse;
+        }
+
+        &:hover {
+
+            .basel-social-icon-name {
+                padding-left: 15px;             
+            }
+        }
+    }
+}
+
+.basel-sticky-social-left {
+    left: 0;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-transform:translate3d(-100%,-50%,0);
+    transform:translate3d(-100%,-50%,0); 
+
+    li[class^="social"] {
+
+        &:hover {
+
+            .basel-social-icon-name {
+                padding-right: 15px;             
+            }
+        }
+    } 
+}

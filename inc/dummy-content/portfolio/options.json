@@ -1,0 +1,13 @@
+{
+	"site_width": "wide",
+	"header": "vertical",
+	"top-bar": false,
+	"header_area": "[social_buttons style=\"colored\" size=\"small\" type=\"follow\"]",
+	"portfolio_pagination": "infinit",
+	"header_background": {
+		"background-color": "#000"
+	},
+	"header_color_scheme": "light",
+	"social_email": "",
+	"pinterest_link": ""
+}

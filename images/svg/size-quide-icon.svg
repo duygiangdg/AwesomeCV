@@ -1,0 +1,11 @@
+<svg version="1.1" id="size-quide-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 79 79" style="enable-background:new 0 0 79 79;" xml:space="preserve" fill="none" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+<rect x="26.8" y="-1.5" transform="matrix(0.7071 0.7071 -0.7071 0.7071 39.1612 -16.2613)" width="24.8" height="81.3"/>
+<line x1="49.6" y1="13.7" x2="59.2" y2="23.3"/>
+<path d="M40.4,20.9"/>
+<line x1="31.9" y1="31.5" x2="41.5" y2="41"/>
+<path d="M21.3,40"/>
+<line x1="13.7" y1="49.6" x2="23.3" y2="59.2"/>
+<line x1="40" y1="21.6" x2="44.9" y2="26.5"/>
+<line x1="21.9" y1="40.2" x2="26.8" y2="45.2"/>
+</svg>

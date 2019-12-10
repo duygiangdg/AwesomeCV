@@ -1,0 +1,152 @@
+
+// --------------------------------------------------------------------------------------------
+// SEARCH RESULTS /  #basel-search-results
+// --------------------------------------------------------------------------------------------
+
+.search-no-results {
+
+	.not-found {
+
+		.entry-header {
+			text-align: center;
+
+			&:before {
+	            content: "\f002";
+				display: inline-block;
+				font-size: 100px;
+				color: $primary-color;
+				opacity: 0.8;
+				margin-bottom: 20px;
+	            font-family: "FontAwesome";
+	        }
+
+	       	.entry-title {
+	       		text-transform: uppercase;
+	       		letter-spacing: 1px;
+	       	}
+		}
+
+		.entry-content {
+	       	text-align: center;
+
+	       	> p {
+	       		font-size: 14px;
+	       		margin-bottom: 30px;
+	       	}
+
+			.searchform {
+				max-width: 350px;
+				width: 100%;
+				margin: 0 auto;
+				margin-bottom: 30px;
+				position: relative;
+
+				input[type="text"] {
+					padding-right: 105px;
+				}
+
+				#searchsubmit {
+					position: absolute;
+					top: 0;
+					right: 0;
+					@include btn-color-primary;
+				}
+			}
+	    }
+	}
+
+// ------------------------------------------
+// SEARCH BY PRODUCT NO RESULTS
+// ------------------------------------------ 	
+
+	&.woocommerce {
+
+		.page-title {
+			
+			.breadcrumbs,
+			.yoast-breadcrumb {
+				display: none;
+			}
+		}
+
+		.woocommerce-info {
+			font-size: 18px;
+			text-transform: uppercase;
+			text-align: center;
+			font-weight: bold!important;
+			color: #1B1919;
+			border:none;
+			background-color: transparent;
+			padding: 0;
+			margin-bottom:5px;
+
+			&:before {
+	            content: "\f002";
+				display: inline-block;
+				font-size: 80px;
+				font-weight: normal;
+				line-height:100px;
+				vertical-align: middle;
+				color: $primary-color;
+				opacity: 0.8;
+				margin-right: 10px;
+				position: static;
+	            font-family: "FontAwesome";
+	        }
+		}
+	}
+}
+
+.no-results {
+	text-align:center;
+	padding:20px 0 20px;
+
+	.searchform {
+		max-width:350px;
+		position:relative;
+		margin:0 auto;
+
+		// .screen-reader-text {
+		// 	display:none;
+		// }
+
+		#searchsubmit {
+			position:absolute;
+			top:0px;
+			right:0px;
+			@include btn-color-primary;
+		}
+	}
+
+	.entry-title {
+		text-transform:uppercase;
+		letter-spacing:1px;
+		font-size:38px;
+		font-weight: bold!important;
+	}
+}
+
+.no-products-footer {
+	text-align:center;
+
+	.search-extended {
+		max-width:350px;
+		width: 100%;
+    	display: inline-block;
+	}
+}
+
+.search-results,
+.search-no-results {
+
+	.page-title {
+
+		.entry-header {
+			
+			.breadcrumbs,
+			.yoast-breadcrumb {
+				display: none;
+			}
+		}
+	}
+}

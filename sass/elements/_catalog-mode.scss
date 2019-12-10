@@ -1,0 +1,64 @@
+
+// ------------------------------------------------------------------------------------------------
+// CATALOG MODE
+// ------------------------------------------------------------------------------------------------
+
+.catalog-mode-on {
+
+	.product-grid-item {
+		
+		.basel-product-countdown {
+			display: none;
+		}
+	}
+
+	.basel-hover-alt {
+
+		.wrapp-swap {
+			line-height: 1.6;
+			height: auto;
+			overflow: visible;
+		}
+
+		.price {
+			line-height: 1.6;
+			height: auto;
+		}
+
+		.btn-add {
+			display: none;
+		}
+
+		&:hover {
+
+			.wrapp-swap {
+
+				.swap-elements {
+				    transform: none;
+				    -webkit-transform: none;
+				    -o-transform: none;
+				    -moz-transform: none;
+				    -ms-transform: none;
+				    -sand-transform: none;			
+				}
+			}
+		}
+	}
+
+	.woocommerce {
+
+		table.wishlist_table {
+
+			.product-add-to-cart {
+				display: none;
+			}
+		}
+	}
+
+	table.compare-list {
+
+		.add-to-cart {
+			display: none;
+		}
+	}
+}

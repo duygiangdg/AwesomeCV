@@ -1,0 +1,10 @@
+{
+	"footer-1": {
+		"widgets": {
+			"text": {
+				"text": "<p style=\"text-align:center; margin-bottom:0px;\"><img src=\"http://demo.xtemos.com/basel/wp-content/themes/basel/images/logo-white.png\" alt=\"Basel\" title=\"Basel and Co.\" style=\"max-width:300px;\"/></p>\r\n[social_buttons type=\"follow\" style=\"colored\" size=\"small\"]\r\n<br>\r\n<p style=\"text-align:center; letter-spacing:1px; font-weight:300;\"><a href=\"#\">Contact Us</a> &nbsp;&nbsp; <a href=\"#\">Shipping & Delivery</a>  &nbsp;&nbsp; <a href=\"#\">Return Policy</a> &nbsp;&nbsp; <a href=\"#\">Our Products</a></p>"
+			}
+		},
+		"flush": true
+	}
+}

@@ -1,0 +1,164 @@
+
+// --------------------------------------------------------------------------------------------
+// TWITTER
+// --------------------------------------------------------------------------------------------
+
+.PI_SimpleTwitterTweets {
+
+    ul {
+
+        li {
+            letter-spacing: .3px;
+            // line-height: 1.7;
+
+            img {
+                border-radius: 50%;
+            }
+
+            em {
+                display: inline-block;
+                margin-top: 10px;
+                font-size: 10px;
+                font-style:normal;
+
+                a {
+                    opacity: 0.7;
+                }
+            }
+
+            .intent-meta {
+                margin-top: 10px;
+
+                a {
+                    font-size: 12px;
+                    text-decoration: none;
+                    margin-right: 7px;
+
+                    &:last-child {
+                        margin-right:0px;
+                    }
+                }
+            }
+
+            .in-reply-to {
+
+                > span[data-icon] {
+
+                    &:before {
+                        content:"\e050";
+                    }
+                }
+            }
+
+            .retweet {
+
+                > span[data-icon] {
+
+                    &:before {
+                        content:"\e098";
+                    }
+                }
+            }
+
+            .favorite {
+
+                > span[data-icon] {
+
+                    &:before {
+                        content: "\e09b";
+                    }
+                }
+            }
+        }
+
+        &.with-tweet-icon {
+
+            li {
+
+                &:before {
+                    content: "\f099";
+                    font-size: 26px;
+                    line-height: 26px;
+                    display: block;
+                    margin-bottom: 15px;
+                    font-family: 'FontAwesome';
+                    opacity: 0.4;
+                }
+            }
+        }
+    }
+
+    // ------------------------------------------
+    // SLIDER TWITTER
+    // ------------------------------------------
+
+    .owl-carousel {
+        
+        li {
+            text-align: center;
+        }
+    }
+
+    .twitter-slider-head {
+        margin-bottom: 20px;
+        text-align: center;
+
+        img {
+            display: inline-block;
+            margin-bottom: 20px;
+            border-radius: 50%;
+        }
+
+        a {
+            display: block;
+            font-family: $title-font;
+            letter-spacing: .6px;
+        }
+    }
+
+    // ------------------------------------------
+    // STATIK TWITTER
+    // ------------------------------------------
+
+    .twitter-list {
+
+        li {
+            position:relative;
+            margin-left: 57px;
+            margin-bottom: 15px;
+            font-size: 14px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(124, 124, 124, 0.15);
+
+            img,
+            &:before {
+                position: absolute;
+                top: 5px;
+                left:0px;
+                margin-left: -57px;
+            }
+
+            &:before {
+                margin-left: -34px;
+            }
+
+            &:last-child {
+                border-bottom:0;
+                padding-bottom:0;
+                margin-bottom: 0;
+            }
+        }
+
+        &.with-tweet-icon {
+
+            li {
+                margin-left: 36px;
+            }
+        }
+    }
+
+    iframe {
+        display:inline-block;
+        margin-top:20px;
+    }
+}

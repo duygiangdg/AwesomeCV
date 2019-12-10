@@ -1,0 +1,277 @@
+
+// ------------------------------------------------------------------------------------------------
+// COMPARE PRODUCT
+// ------------------------------------------------------------------------------------------------
+
+.basel-compare-table {
+    position: relative;
+
+    &.loading {
+
+        .compare-loader {
+            opacity: 1;
+            visibility: visible;
+
+            &:after {
+                @include act-loader;
+            }
+        }
+    }
+
+    .compare-loader {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(255,255,255,.6);
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: opacity .25s ease-in-out, visibility .25s ease-in-out;
+        transition: opacity .25s ease-in-out, visibility .25s ease-in-out;
+    
+        &:after {
+            @include loader(34px, 2px, $primary-color);
+            z-index: 2;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -16px;
+            margin-top: -16px;
+        }
+    }
+} 
+
+// ------------------------------------------
+// COMPARE LAYAOUT STYLES
+// ------------------------------------------ 
+
+.basel-compare-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+
+    &:nth-child(even)  {
+
+        .basel-compare-col {
+            background-color: #F9F9F9;
+        }        
+    } 
+}
+
+//****  COMPARE COLUMN  ****//
+
+.basel-compare-col {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 15px;
+    word-break: break-word;
+    
+    img {
+
+        &:not(.size-woocommerce_thumbnail) {
+            max-width: 110px;
+        }        
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
+    .product-image {
+        display: block; 
+    }
+
+    .product-title {
+        font-size: 16px;
+    }
+
+    .add_to_cart_button,
+    .added_to_cart {
+        @include btn-color-black;
+    }    
+
+    .add_to_cart_button {
+
+        &:after {
+            margin-top: -8px;
+            border-color: white;
+        }
+
+        &.added {
+            display: none;
+        }
+    }
+
+    .stock {
+        display: inline-block;
+        padding: 5px 10px;
+        color: #297E29;
+        border: 2px solid #297E29;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: .3px;
+        font-weight: bold;
+
+        &.out-of-stock {
+            border-color:#B50808;
+            color: #B50808;
+        }
+    }
+
+    &:not(:last-child) {
+        border-right: 1px solid rgba(124, 124, 124, 0.15);
+    }
+}
+
+//****  COMPARE COLUMN TITLE  ****//
+
+.compare-field {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    color: $heading-color;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: $title-font;
+}
+
+
+//****  COMPARE COLUMN CONTENT  ****//
+
+.compare-value {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 26.66666%;
+    flex: 0 1 26.66666%;
+    text-align: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    *:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    .price {
+
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+
+    .compare-basic & {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        padding-top: 0;
+
+        &:before {
+            display: none;
+        }
+    }
+
+    // .compare-description & {
+    //     line-height: 1.5;
+    // }
+}
+
+// ------------------------------------------
+// COMPARE REMOVE STYLES
+// ------------------------------------------ 
+
+.basel-compare-remove {
+    position: relative;
+    display: inline-block;
+    color:#212121;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    line-height: 20px;
+    padding-right: 25px;
+    -webkit-transition: color .2s ease-in-out;
+    transition: color .2s ease-in-out;
+
+    .remove-loader {
+        @include loader(15px,1px);
+        position: absolute;
+        opacity: 0;
+        top: 50%;
+        right: 0;
+        margin-top: -7px;
+        -webkit-transition: opacity .25s ease-in-out;
+        transition: opacity .25s ease-in-out;
+    }
+
+    &.loading {
+
+        .remove-loader {
+            opacity: 1;
+            @include act-loader;
+        }
+
+        &:before,
+        &:after {
+            opacity: 0;
+        }
+    }
+        
+    &:before,
+    &:after {
+        content: " ";
+        position:absolute;
+        width: 15px;
+        height: 2px;
+        right:0px;
+        top: 9px;
+        display: inline-block;
+        background-color: #212121;
+        -webkit-transition: background-color .2s ease-in-out, transform .2s ease-in-out;
+        transition: background-color .2s ease-in-out, transform .2s ease-in-out;
+    }
+
+    &:hover,
+    &:focus {
+        text-decoration:none;
+
+        &:after {
+            transform:rotate(-45deg);
+            -webkit-transform:rotate(-45deg);           
+            -ms-transform:rotate(-45deg);
+        }
+
+        &:before {
+            transform:rotate(45deg);
+            -webkit-transform:rotate(45deg);
+            -ms-transform:rotate(45deg);            
+        }
+    }  
+}
+
+// ---------------------------------
+// EMPTY COMPARE
+// ---------------------------------
+
+.basel-empty-compare {
+    @extend %basel-empty-page-style;
+    
+    &:before {
+		content: "\e098";
+	}
+}

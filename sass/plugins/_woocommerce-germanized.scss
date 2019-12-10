@@ -1,0 +1,53 @@
+
+// --------------------------------------------------------------------------------------------
+// WOO GERMANIZED
+// --------------------------------------------------------------------------------------------
+
+.woocommerce-checkout-review-order {
+    display: flex;
+    display: -webkit-flex;
+   -webkit-display: flex;
+    -ms-display: flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+}
+#order_review_heading {
+    order:1;
+    -webkit-order:1;
+    -ms-order:1;
+}
+.woocommerce-checkout-review-order .responsive-table {
+    order:2;
+    -webkit-order:2; 
+    -ms-order:2;
+}
+#order_payment_heading {
+    order:3;
+    -webkit-order:3;
+    -ms-order:3;
+}
+#payment {
+    order:4;
+    -webkit-order:4;
+    -ms-order:4;
+}
+.wc-terms-and-conditions { //deprecated need to remove
+  order:5;
+  -webkit-order:5;
+  -ms-order:5;
+}
+.wc-gzd-order-submit {
+  order:6;
+  -webkit-order:6;
+  -ms-order:6;
+}
+#order_review_heading {
+    text-align:center;
+}
+#order_review_heading,
+#order_payment_heading {
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    font-weight: bold;
+}

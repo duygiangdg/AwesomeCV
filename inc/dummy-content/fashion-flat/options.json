@@ -1,0 +1,34 @@
+{
+	"menu_align": "center",
+	"header": "simple",
+	"primary-color": "#212121",
+	"right_column_width": "200",
+	"header_full_width": "0",
+	"top-bar-bg": "",
+	"top-bar-color": "dark",
+	"header-border": false,
+	"text-font": {
+		"font-family": "Hind",
+		"google": true
+	},
+	"primary-font": {
+		"font-family": "Montserrat",
+		"google": true
+	},
+	"post-titles-font": {
+		"font-family": "Lora",
+		"google": true
+	},
+	"secondary-font": {
+		"font-family": "Karla",
+		"google": true
+	},
+	"widget-titles-font": {
+		"font-family": "Karla",
+		"google": true
+	},
+	"navigation-font": {
+		"font-family": "Hind",
+		"google": true
+	}
+}

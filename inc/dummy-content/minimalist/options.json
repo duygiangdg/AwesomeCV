@@ -1,0 +1,32 @@
+{
+	"top-bar": false,
+	"footer-layout": "1",
+	"site_width": "boxed",
+	"header": "simple",
+	"menu_align": "center",
+	"right_column_width": 250,
+	"text-font": {
+		"font-family": "Lato",
+		"google": true
+	},
+	"primary-font": {
+		"font-family": "Lato",
+		"google": true
+	},
+	"post-titles-font": {
+		"font-family": "Lato",
+		"google": true
+	},
+	"secondary-font": {
+		"font-family": "Lato",
+		"google": true
+	},
+	"widget-titles-font": {
+		"font-family": "Lato",
+		"google": true
+	},
+	"navigation-font": {
+		"font-family": "Lato",
+		"google": true
+	}
+}

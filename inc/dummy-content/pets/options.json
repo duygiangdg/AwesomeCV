@@ -1,0 +1,52 @@
+{
+	"top-bar" : true,
+	"top-bar-bg" : {
+		"background-color" : "#e0b36e"
+	},
+	"header_background" : {
+		"background-color" : "#efc17a",
+		"background-image" : "http://dummy.xtemos.com/basel/vers/wp-content/uploads/sites/3/2017/01/header-bg-2-1024x85-1024x85.png",
+		"background-size" : "cover",
+		"background-repeat" : "no-repeat",
+		"background-position" : "left bottom"
+	},
+	"footer-bar-bg" :{
+		"background-image" : "http://dummy.xtemos.com/basel/vers/wp-content/uploads/sites/3/2017/01/dog-eat-bg2-1024x682-1024x682.jpg",
+		"background-size" : "cover"
+	},
+	"header" : "simple",
+	"site_width" : "boxed",
+	"menu_align" : "center",
+	"primary-color" : "#EFC17A",
+	"header-border" : false,
+	"header_color_scheme" : "light",
+	"shopping_cart" : 1,
+	"shopping_icon_alt" : true,
+	"header_search" : "dropdown",
+	"cart_position" : "dropdown",
+	"text-font" : {
+		"font-family" : "Ubuntu",
+		"google" : true
+	},
+	"primary-font" : {
+		"font-family" : "Kreon",
+		"google" : true,
+		"font-weight" : 400
+	},
+	"post-titles-font" : {
+		"font-family" : "Kreon",
+		"google" : true,
+		"font-weight" : 400
+	},
+	"navigation-font" : {
+		"font-family" : "Lato",
+		"google" : true,
+		"font-size" : "13px",
+		"font-weight" : 700
+	},
+	"secondary-font" : {
+		"font-family" : "Satisfy",
+		"font-weight" : 400,
+		"google" : true
+	}
+}

@@ -1,0 +1,590 @@
+
+// --------------------------------------------------------------------------------------------
+// SECTION TITLE
+// --------------------------------------------------------------------------------------------
+
+.title-wrapper {
+
+    > span {
+        display: block;
+    }
+
+    .title {
+        display: block;
+        margin-bottom:30px;
+        position:relative;
+    }
+
+    .font-default {
+        letter-spacing: 3px;
+    }
+
+    .title-subtitle {
+        margin-bottom: 10px;
+    }
+
+    .title-after_title {
+        margin-bottom: 20px;
+        margin-top:-5px;
+        line-height: 1.6;
+
+        p {
+            margin-bottom:0px;
+        }
+    }
+
+    .title-separator {
+        display:none;
+    }
+
+    .liner-continer {
+        display:block;
+
+        .left-line,
+        .right-line {
+            display: none;
+        }
+    }
+
+    // ------------------------------------------
+    // TITLE STYLE
+    // ------------------------------------------
+
+    &.basel-title-style-default {
+
+        .title {
+            margin-bottom: 20px;
+        }
+    }
+
+    &.basel-title-style-simple {
+
+        .title {
+
+            &:after {
+                content:"";
+                position:absolute;
+                bottom:-12px;
+                left:50%;
+                margin-left:-15px;
+                width:30px;
+                height: 2px;
+                display: inline-block;
+                background-color: $primary-color;
+            }
+        }
+    }
+
+    &.basel-title-style-cross {
+
+        .title {
+            position:relative;
+        }
+        
+        .title-separator {
+            display:block;
+
+            &:after,
+            &:before {
+                content: " ";
+                position:absolute;
+                bottom:-12px;
+                left:50%;
+                margin-left:-12px;
+                width: 24px;
+                height: 1px;
+                display: inline-block;
+                background-color: #DCDCDC;
+            }
+
+            &:before {
+                margin-left:-34px;
+            }
+
+            &:after {
+                margin-left:10px;
+            }
+
+            span {
+
+                &:after,
+                &:before {
+                    content: " ";
+                    position:absolute;
+                    bottom:-12px;
+                    left:50%;
+                    margin-left:-6px;
+                    width: 12px;
+                    height: 1px;
+                    display: inline-block;
+                    background-color: #C1C1C1;
+                }
+
+                &:before {
+                    -webkit-transform:rotate(45deg);
+                    -moz-transform:rotate(45deg);
+                    -o-transform:rotate(45deg);
+                    -ms-transform:rotate(45deg);
+                    -sand-transform:rotate(45deg);
+                    transform:rotate(45deg);
+                }
+
+                &:after {
+                    -webkit-transform:rotate(-45deg);
+                    -moz-transform:rotate(-45deg);
+                    -o-transform:rotate(-45deg);
+                    -ms-transform:rotate(-45deg);
+                    -sand-transform:rotate(-45deg);
+                    transform:rotate(-45deg);
+                }
+            }
+        }
+    }
+
+    &.basel-title-style-bordered {
+
+        .liner-continer {
+            display: table-row;
+
+            .left-line,
+            .right-line {
+                display: table-cell;
+
+                &:after {
+                    background-color: rgba(118, 118, 118, 0.14);
+                }
+            }
+
+            .title {
+                white-space: nowrap;
+                margin-bottom:0;
+                max-width: 900px;
+                overflow: hidden;
+            }
+        }
+
+        .title-after_title {
+            margin-top: 15px;
+        }
+    }
+
+    &.basel-title-style-shadow {
+        box-shadow: 10px 6px 0px #191919;
+        border:2px solid #191919;
+
+        .title {
+            margin-bottom:0;
+        }
+
+        .title-subtitle {
+            margin-bottom:0;
+
+            + .liner-continer, 
+            + .title-after_title {
+                margin-top:10px;
+            }
+        }
+
+        .title-after_title {
+            margin-bottom:0px;
+        }
+
+        .liner-continer {
+            margin-bottom:0px;
+
+            + .title-after_title {
+                margin-top:10px;
+            }
+        }
+    }
+
+    // ------------------------------------------
+    // TITLE POSITION
+    // ------------------------------------------
+
+    &.text-left {
+
+        &.basel-title-style-cross {
+
+            .title-separator {
+
+                &:after {
+                    left:15px;
+                    margin-left: 0px;
+                }
+
+                &:before {
+                    display:none;
+                }
+
+                span {
+                   &:after,
+                    &:before {
+                        left:0;
+                        margin-left:0;
+                    } 
+                }
+            }
+        }
+
+        &.basel-title-style-simple {
+
+            .title {
+            
+                &:after {
+                    left:0;
+                    margin-left:0;
+                }
+            }
+        }
+
+        &.basel-title-style-bordered {
+
+            .liner-continer {
+            
+                .left-line {
+                    display:none;
+                }
+
+                .right-line {
+                    width:100%;
+                }
+            }
+        }
+    }
+
+    &.text-right {
+
+        &.basel-title-style-simple {
+            
+            .title {
+            
+                &:after {
+                    margin-left:0;
+                    left:auto;
+                    right:0px;
+                }
+            }
+        }
+
+        &.basel-title-style-cross {
+
+            .title-separator {
+
+                &:after {
+                    display:none;
+                }
+
+                &:before {
+                    left:auto;
+                    right:15px;
+                    margin-left: 0px;
+                }
+
+                span {
+                    
+                    &:after,
+                    &:before {
+                        left:auto;
+                        right:0;
+                        margin-left:0;
+                    } 
+                }
+            }
+        }
+
+        &.basel-title-style-bordered {
+
+            .liner-continer {
+            
+                .right-line {
+                    display:none;
+                }
+
+                .left-line {
+                    width:100%;
+                }
+            }
+        }
+    }
+
+    // ------------------------------------------
+    // TITLE SIZE 
+    // ------------------------------------------
+
+    &.basel-title-size-extra-large {
+
+        .title-subtitle {
+            font-size: 26px;
+        }
+
+        .title {
+            font-size: 42px;
+        }
+
+        .title-after_title {
+            font-size: 16px;
+        }
+    }
+
+    &.basel-title-size-large {
+
+        .title-subtitle {
+            font-size: 20px;
+        }
+
+        .title {
+            font-size: 36px;
+        }
+
+        .title-after_title {
+            font-size: 16px;
+        }
+    }
+
+    &.basel-title-size-default {
+
+        .title-subtitle {
+            font-size: 14px;
+        }
+
+        .title {
+            font-size: 26px;
+        }
+
+        .title-after_title {
+            font-size: 14px;
+        }
+    }
+
+    &.basel-title-size-small {
+
+        .title-subtitle {
+            font-size: 12px;
+        }
+
+        .title {
+            font-size: 18px;
+        }
+
+        .title-after_title {
+            font-size: 12px;
+        }
+    }
+
+    // ------------------------------------------
+    // TITLE COLOR  
+    // ------------------------------------------
+
+    &.basel-title-color-default {
+
+        .title-subtitle {
+            color: rgba(155, 155, 155, 1);
+        }
+    }
+
+    &.basel-title-color-primary {
+
+        .title-subtitle {
+            color: $primary-color;
+        }
+    }
+
+    &.basel-title-color-alt {
+        
+        .title-subtitle {
+            color: $alternative-color;
+        }
+    }
+
+    &.basel-title-color-black {
+        
+        .title-subtitle {
+            color: #000000;
+        }
+    }
+
+    &.basel-title-color-white {
+        
+        .title-subtitle {
+            color: #ffffff;
+        }
+
+        .title {
+            color: #ffffff;
+
+            &:after {
+                border-color:rgba(255, 255, 255, 0.50);
+            }
+        }
+
+        .title-separator {
+
+            &:after,
+            &:before {
+                background-color:rgba(255, 255, 255, 0.60);
+            }
+
+            span {
+                
+                &:after,
+                &:before {
+                    background-color:rgba(255, 255, 255, 0.60);
+                }
+            }
+        }
+
+        .liner-continer {
+
+            .left-line,
+            .right-line {
+                &:after {
+                    background-color:rgba(255, 255, 255, 0.40);
+                }
+            }
+        }
+
+        .title-after_title {
+            color: #ffffff;
+
+            p {
+                color: #ffffff;
+            }
+        }
+    }
+
+    &.basel-title-color-gradient {
+
+        .title {
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-fill-color: transparent;
+        }
+    }
+
+    // ------------------------------------------
+    // TITLE COLOR SCHEME  
+    // ------------------------------------------
+
+    .color-scheme-light & {
+
+        &.basel-title-color-default,
+        &.basel-title-color-primary,
+        &.basel-title-color-alt,
+        &.basel-title-color-black {
+
+            .title {
+                color: white;
+            }
+
+            .title-after_title {
+                color:rbga(255,255,255,0.9);
+            }
+        }
+
+        &.basel-title-style-simple {
+
+            .title {
+
+                &:after {
+                    border-color: rgba(255, 255, 255, 0.5); 
+                }
+            }
+        }
+
+        &.basel-title-style-bordered {
+
+            .left-line,
+            .right-line {
+                &:after {
+                    background-color:rgba(255, 255, 255, 0.40);
+                }
+            }
+        }
+
+        &.basel-title-style-shadow {
+            box-shadow: 10px 6px 0px #ffffff;
+            border-color:#ffffff;
+        }
+    }
+}
+
+// ------------------------------------------------------------------------------------------------
+// RESPONSIVE TEXT
+// ------------------------------------------------------------------------------------------------
+
+.basel-text-block-wrapper {
+    margin-bottom: 35px;
+
+    .basel-text-block {
+
+        p:first-child:empty,
+        p:first-child:empty ~ p:last-child {
+            display:none;
+        }
+
+        h1,h2,h3,h4,h5,h6,p,a {
+            font-size: inherit;
+            color: inherit;
+            line-height: inherit;
+        }
+    }
+
+    &.text-center {
+        
+        .basel-text-block {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &.text-left {
+
+        .basel-text-block {
+            margin-right: auto;
+        }        
+    }
+
+    &.text-right {
+
+        .basel-text-block {
+            margin-left: auto;
+        }         
+    }
+
+    &.color-scheme-dark {
+
+        .basel-text-block {
+            color: $heading-color;
+        }
+    }
+    
+    &.color-scheme-light {
+
+        .basel-text-block {
+            color: white;
+        }
+    }
+}
+
+@each $space in 10, 20, 30, 40, 50, 60, 70, 80, 90 {
+
+    .basel-text-block-width-#{$space} {
+
+        .basel-text-block {
+            max-width:#{$space * 1%};
+        }
+    }
+}
+
+// ------------------------------------------
+// FONT WEIGHT
+// ------------------------------------------
+
+@each $weight in 100, 200, 300, 400, 500, 600, 700, 800, 900 {
+
+    .basel-font-weight-#{$weight} {
+        font-weight:#{$weight}!important;
+    }
+}

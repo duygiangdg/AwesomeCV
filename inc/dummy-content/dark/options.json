@@ -1,0 +1,40 @@
+{
+	"top-bar": false,
+	"header_full_width": false,
+	"header": "simple",
+	"sticky_footer": false,
+	"dark_version": true,
+	"header_color_scheme": "light",
+	"primary-color": "#b57b00",
+	"menu_align": "center",
+	"right_column_width": 230,
+	"body-background": {
+		"background-color": "#0c0c0c"
+	},
+
+	"text-font": {
+		"font-family": "Open Sans",
+		"google": true
+	},
+	"primary-font": {
+		"font-family": "Lora",
+		"google": true
+	},
+	"post-titles-font": {
+		"font-family": "Lora",
+		"google": true
+	},
+	"secondary-font": {
+		"font-family": "Italianno",
+		"google": true
+	},
+	"widget-titles-font": {
+		"font-family": "Lora",
+		"google": true
+	},
+	"navigation-font": {
+		"font-family": "Open Sans",
+		"google": true,
+		"font-weight": 600
+	}
+}

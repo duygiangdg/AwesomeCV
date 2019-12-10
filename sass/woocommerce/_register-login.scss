@@ -1,0 +1,522 @@
+
+// --------------------------------------------------------------------------------------------
+// REGISTER-LOGIN
+// --------------------------------------------------------------------------------------------
+
+// ------------------------------------------
+// WOO LOGIN
+// ------------------------------------------ 
+
+.basel-registration-page {
+	position: relative;
+	margin-bottom:20px;
+	margin-top:20px;
+
+	h2 {
+		font-size:34px;
+
+		&:before {
+			content: "\e066";
+			font-family: 'simple-line-icons';
+			display:inline-block;
+			font-size: 24px;
+    		margin-right: 10px;
+		}
+	}
+
+	&.basel-no-registration {
+		max-width:540px;
+		margin-left:auto;
+		margin-right:auto;
+		padding-left: 20px;
+    	padding-right: 20px;
+
+		&:after {
+			content:none;
+		}
+	}
+}
+
+.register {
+
+	> p {
+		position: relative;
+	}
+
+	#reg_password {
+
+		&:focus {
+
+			+ .woocommerce-password-strength {
+				
+				+ .woocommerce-password-hint {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+	}
+
+	.woocommerce-privacy-policy-text {
+
+		a {
+			font-weight: 600;			
+		}
+
+		p {
+	
+			&:last-child {
+				margin-bottom: 15px;
+			}
+		}	
+	}
+}
+
+.col-register {
+
+	h2 {
+
+		&:before {
+			content: "\e005";
+		}
+	}
+}
+
+.col-register-text {
+	text-align:center;
+
+	h2 {
+
+		&:before {
+			content: none;
+		}
+	}
+}
+
+.col-register,
+.col-register-text {
+	border-left-width: 1px;
+	border-color: rgba(0, 0, 0, 0.1);
+	border-style: solid;
+}
+
+.registration-info,
+.login-info {
+	margin-bottom:20px;
+	// line-height:1.6;
+}
+
+#customer_login {
+	// margin-left: -60px;
+	// margin-right:-60px;
+
+	.col-register,
+	.col-login,
+	.col-register-text {
+		-webkit-box-flex: 1;
+		-ms-flex: 1 0 0px;
+		flex: 1 0 0;
+		padding-left:60px;
+		padding-right:60px;
+		padding-top: 40px;
+		padding-bottom: 60px;
+	}	
+}
+
+.basel-register-tabs {
+
+	.col-register {
+		border-left:none;
+		display: none;
+	}
+
+	.col-register,
+	.col-login {
+		animation: fade-in 0.7s ease;
+		-webkit-animation: fade-in 0.7s ease;
+	} 
+}
+
+.active-register {
+
+	.col-register { 
+		display: block;
+	}
+
+	.col-login {
+		display: none;
+	}
+}
+
+.with-login-reg-info {
+
+	.registration-info,
+	.login-info {
+		animation: fade-in 0.7s ease;
+		-webkit-animation: fade-in 0.7s ease;		
+	}
+
+	.login-info {
+		display: none;
+	}
+
+	&.active-register {
+
+		.registration-info {
+			display: none;
+		}
+
+		.login-info {
+			display: block;
+		}
+	}
+}
+
+.login-form-footer {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+
+    .lost_password,
+	.remember-me-label,
+	.woocommerce-form-login__rememberme {
+    	margin-bottom: 10px;
+    	font-size: 14px;
+    	font-weight: 400;
+    }
+
+	.remember-me-label,
+	.woocommerce-form-login__rememberme {
+    	-webkit-box-ordinal-group:2;
+    	-ms-flex-order:1;
+		order:1;
+		margin-right: 10px;
+    }
+
+    .lost_password {
+    	-webkit-box-ordinal-group:3;
+    	-ms-flex-order:2;
+    	order:2;
+
+		&:before {
+			content: "\e056";
+			display: inline-block;
+			margin-top: -2px;
+			margin-right: 7px;
+			vertical-align: middle;
+			font-family: 'simple-line-icons';
+		}
+	    
+    	&:hover,
+    	&:focus {
+    		color: $primary-color;
+    		text-decoration:none;
+    	}
+    }
+}
+
+.lost_reset_password {
+	max-width:500px;
+	padding-top:40px;
+	padding-bottom: 40px;
+	padding-left: 20px;
+    padding-right: 20px;
+	margin:0 auto;
+
+	.form-row-first {
+		width:100%;
+		margin-top:20px;
+	}
+
+	.form-row-last {
+		float: none;
+		width: 100%;
+	}
+
+	p {
+
+		&:first-child {
+			font-size:18px;
+			line-height:1.8;
+			display:inline;
+			border-bottom:1px solid #EFEFEF;
+		}
+	}
+}
+
+.register,
+.login,
+.lost_reset_password {
+
+	.button {
+		width:100%;
+		margin-top:10px;
+		border:2px solid black;
+		background-color:transparent;
+		color:black;
+
+		&:hover,
+		&:focus {
+			background-color:#333333;
+			border-color:#333333;
+			color:white;
+		}
+	}
+
+	> *:last-child {
+		margin-bottom:0px;
+	}
+}
+
+.social-login-title,
+.register-or {
+	font-weight: 600;
+    text-transform: uppercase;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 35px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+	&:after,
+	&:before {
+	    content: "";
+	    -webkit-box-flex: 1;
+	    -ms-flex: 1 0 0px;
+	    flex: 1 0 0;
+	    border-bottom-width: 1px;
+	    border-bottom-style: solid;
+	    border-color: #E2E2E2;
+	}
+
+	&:after {
+		margin-left: 20px;
+	}
+
+	&:before {
+		margin-right: 20px
+	}
+}
+
+.register-or {
+	display: none;
+	margin-top: 0;
+}
+
+.basel-social-login {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-left: -5px;
+	margin-right: -5px;
+}
+
+.social-login-btn {
+	flex:1 1 200px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-bottom: 15px;
+
+	> a {
+		position: relative;
+		color:white!important;
+		display: block;
+		border: none;
+
+		&:before {
+			position: absolute;
+			top: 50%;
+			left: 15px;
+			font-size: 22px;
+			line-height: 26px;
+			font-weight: normal;
+			font-family: "FontAwesome";
+			transform: translateY(-50%);
+		}
+
+		&:hover {
+			color:white!important;
+		}
+	}
+
+	.login-vk-link {
+	    background-color: #597DA3;
+
+	   	&:before {
+			content:"\f189";
+		}
+
+		&:hover,
+		&:focus {
+			background-color: darken(#597DA3,7%);
+		}
+	}
+
+	.login-fb-link {
+	    background-color: #3B5998;
+
+	    &:before {
+			content:"\f09a";
+		}
+
+		&:hover,
+		&:focus {
+			background-color: darken(#3B5998,7%);
+		}
+	}
+
+	.login-goo-link {
+		background-color: #4285F4;
+
+		&:before {
+			content:"\f0d5";
+		}
+
+		&:hover,
+		&:focus {
+			background-color: darken(#4285F4,7%);
+		}
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.basel-social-alt-style {
+
+	.login-fb-link {
+
+		&:before {
+			left: 9px;
+			font-size: 28px;
+			content:"\f230";
+		}
+	}
+
+	.login-goo-link {
+
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		&:before {
+			left: 13px;
+			z-index: 1;
+			width: 16px;
+			height: 16px;
+			background-image: url('inc/assets/images/google-btn-icon.svg');
+			background-position: center;
+			background-size: cover;
+		}
+
+		&:after {
+			left: 8px;
+			width: 26px;
+			height: 26px;
+			background-color: #FFF;
+		}
+	}
+
+	.login-vk-link {
+
+		&:before {
+			left: 10px;
+		}
+	}
+}
+
+// ------------------------------------------
+// PASSWORD HINT 
+// ------------------------------------------ 
+
+.woocommerce-password-hint {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    margin-bottom: -10px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    max-width: 300px;
+    width: 100%;
+    transition:opacity 0.5s, visibility 0.5s;
+    -webkit-transition:opacity 0.5s, visibility 0.5s;
+    animation: fade-in 0.5s;
+    -webkit-animation: fade-in 0.5s;
+
+    &:after {
+	    content: "\f0d7";
+	    position: absolute;
+	    top: 100%;
+	    left: 30px;
+	    font-size: 26px;
+	    line-height: 7px;
+	    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+	    color: white;
+	    font-family: "FontAwesome";
+    }
+}
+
+.woocommerce-password-strength {
+	margin-top: 20px;
+	margin-bottom: -10px;
+    padding: 10px 20px;
+    display: none;
+
+	&.short,
+	&.bad,
+	&.strong,
+	&.good {
+		display: block;
+		color: #ffffff;
+	}
+
+    &.short,
+    &.bad {
+    	background-color: #E0B252;
+    }
+
+    &.strong,
+    &.good {
+	    font-weight: bold;
+	    background-color: #459647;
+	}
+	
+	&:empty {
+		display: none;
+		margin: 0;
+		padding: 0;
+	}
+}

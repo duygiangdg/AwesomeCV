@@ -1,0 +1,20 @@
+{
+	"products_columns" : 3,
+	"shop_filters" : false,
+	"ajax_shop" : false,
+	"shop_layout" : "sidebar-left",
+	"products_masonry" : true,
+	"shop_title" : true,
+	"shop_categories" : false,
+	"header" : "simple",
+	"header-overlap" : true,
+	"header_color_scheme" : "light",
+	"menu_align" : "center",
+	"header-border" : false,
+	"title-background" : {
+		"background-color" : "#090909",
+		"background-image" : "http://dev.xtemos.com/new/wp-content/uploads/2015/08/bg-shop-totle.jpg"
+	},
+	"page-title-size" : "default",
+	"page-title-color" : "light"
+}

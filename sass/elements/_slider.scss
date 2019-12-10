@@ -1,0 +1,445 @@
+
+// ------------------------------------------------------------------------------------------------
+// SLIDER 
+// ------------------------------------------------------------------------------------------------
+
+// ------------------------------------------
+// SLIDER GENERAL STILE
+// ------------------------------------------ 
+
+.basel-slider {
+	overflow: hidden;
+}
+
+// SLIDER IN CONTAINER
+
+.slider-in-container {
+		
+	.basel-slide-container {
+		width: 100%;
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+}
+
+// ------------------------------------------
+// SLIDE STYLE
+// ------------------------------------------ 
+
+.basel-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    .basel-slide-container {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-webkit-box-align: stretch;
+		-ms-flex-align: stretch;
+		align-items: stretch;
+		padding-top: 35px;
+		padding-bottom: 35px;
+
+	    &:after,
+	    &:before {
+	    	content: none;
+	    }
+    }
+
+	.basel-slide-inner {
+		position: relative;
+		width: 100%;
+	}
+}
+
+// ------------------------------------------
+// SLIDER VERTICAL ALIGMENTS
+// ------------------------------------------ 
+
+.slide-valign-top {
+
+    .basel-slide-container {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+    }
+}
+
+.slide-valign-middle {
+
+    .basel-slide-container {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+}
+
+.slide-valign-bottom {
+
+    .basel-slide-container {
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+    }
+}
+
+// ------------------------------------------
+// SLIDER HORISONTAL ALIGMENTS
+// ------------------------------------------ 
+
+.slide-halign-left {
+
+    .basel-slide-container {
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+}
+
+.slide-halign-center {
+
+    .basel-slide-container {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+}
+
+.slide-halign-right {
+
+    .basel-slide-container {
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+    }
+}
+
+// ------------------------------------------
+// SLIDER ARROW
+// ------------------------------------------ 
+
+// GENERAL STYLE
+
+.basel-slider {
+
+	.owl-nav {
+
+		> div {
+
+            &.owl-prev {
+                left: 25px;
+				padding-right: 4px;
+			}
+
+			&.owl-next {
+				right: 25px;
+				padding-left: 4px;
+            }
+            
+            &:before {
+                width: 51px;
+            }
+		}
+	}
+
+	&:after,
+	&:before {
+		content: none;
+    }
+    
+    &:hover {
+
+        .owl-nav {
+
+            > div {
+    
+                &.owl-prev {
+                    left: 0;
+                }
+    
+                &.owl-next {
+                    right: 0;
+                } 
+            }
+        }
+    }
+}
+
+// GENERAL STYLE OF ARROW DESIGN 2 - 3
+
+.arrows-style-2,
+.arrows-style-3 {
+
+	.owl-nav {
+
+		> div {
+			background-color: white;
+            box-shadow: 0 0 9px rgba(0, 0, 0, 0.1);
+
+			&:before {
+				font-size: 26px;
+			}
+		}
+	}
+
+	&.pagin-color-light {
+
+		.owl-nav {
+
+			> div {
+				background-color: $scheme-light--background-popup;
+			}
+		}
+	}
+}
+
+// ARROW DESIGN 3
+
+.arrows-style-3 {
+
+    .basel-slider {
+
+        .owl-nav {
+
+            > div {
+                border-radius: 50%;
+    
+                &.owl-prev {
+                    left: 40px;
+                }
+    
+                &.owl-next {
+                    right: 40px;
+                } 
+            }
+        }
+        
+        &:hover {
+    
+            .owl-nav {
+    
+                > div {
+        
+                    &.owl-prev {
+                        left: 15px;
+                    }
+        
+                    &.owl-next {
+                        right: 15px;
+                    } 
+                }
+            }
+        }
+    }
+
+	&.pagin-color-dark { // FIX DARK VERSION
+
+		.owl-nav {
+
+			> div {
+				color: rgba(0, 0, 0, 0.8);
+
+				&:hover {
+					color: rgba(0, 0, 0, 0.5);
+				}
+			}
+		}
+	}
+}
+
+// ------------------------------------------
+// SLIDER DOTS
+// ------------------------------------------ 
+
+// GENERAL STYLE OF PAGINATION
+
+.basel-slider {
+
+	.owl-dots {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin-top: 0;
+		padding-bottom: 5px;
+		text-align: center;
+		animation: fade-in .6s ease;
+	}
+}
+
+// PAGINATION STYLE 2
+
+.pagin-style-2 {
+
+	.owl-dots {
+		counter-reset: section;
+		padding-bottom: 15px;
+
+		.owl-dot {
+			padding: 2px 15px;
+			white-space: nowrap;
+			line-height: 1;
+			color: $light-dark;
+
+			&:before,
+			&:after {
+				display: inline-block;
+				vertical-align: middle;
+				color: inherit;				
+			}
+
+			&:before {
+				counter-increment: section;
+				content: "0" counter(section);
+				margin-right: 5px;
+				font-size: 15px;
+				font-weight: 600;
+			}
+
+			&:after {
+				content: "";
+				height: 2px;
+				width: 15px;
+				background-color: currentColor;
+				transition: 
+					width .3s ease;
+			}
+
+			span {
+				display: none;
+			}
+
+			&:hover {
+
+				&:after {
+					width: 35px;
+				}
+			}
+
+			&.active {
+
+				&:after {
+					width: 45px;
+				}
+			}
+		}
+	}
+
+	&.pagin-color-light {
+
+		.owl-dots {
+			
+			.owl-dot {
+				color: $scheme-light--body-color-darken;
+			}
+		}
+	}
+}
+
+// ------------------------------------------
+// SLIDER CONTENT ANIMATION
+// ------------------------------------------ 
+
+.basel-slider {
+
+	.slide-animation {
+		opacity: 0;
+		will-change: transform, opacity;
+		-webkit-backface-visibility: hidden;
+		transition: 
+			opacity .8s ease,
+			transform .8s ease;
+	}
+
+	.anim-slide-from-top {
+		transform: translateY(-150px);
+	}
+
+	.anim-slide-from-bottom {
+		transform: translateY(150px);
+	}
+
+	.anim-slide-from-left {
+		transform: translateX(-500px);
+	}
+
+	.anim-slide-from-right {
+		transform: translateX(500px);
+	}
+
+	.anim-zoom-in {
+		transform: scale(0.6);
+	}
+
+	.anim-bottom-flip-x {
+		transform: translateY(100px) rotate3d(1,0,0,90deg) scale(0.6);
+	}
+
+	.anim-top-flip-x {
+		transform: translateY(-100px) rotate3d(1,0,0,90deg) scale(0.6);
+	}
+
+	.anim-left-flip-y {
+		transform: translateX(-100px) rotate3d(0,1,0,-90deg) scale(0.6);
+	}
+
+	.anim-right-flip-y {
+		transform: translateX(100px) rotate3d(0,1,0,90deg) scale(0.6);
+	}
+	
+	.active {
+
+		.slide-animation {
+			opacity: 1;
+		}
+
+		.anim-slide-from-top,
+		.anim-slide-from-bottom,
+		.anim-slide-from-left,
+		.anim-slide-from-right,
+		.anim-zoom-in {
+			transform: none;
+		}
+
+		.anim-bottom-flip-x {
+			transform: perspective(1000px) translateY(0) rotate3d(1,0,0,0deg) scale(1);
+		}
+
+		.anim-top-flip-x {
+			transform: perspective(1000px) translateY(0) rotate3d(1,0,0,0deg) scale(1);
+		}
+
+		.anim-left-flip-y {
+			transform: perspective(1000px) translateY(0px) rotate3d(0, 1, 0, 0deg) scale(1);
+		}
+
+		.anim-right-flip-y {
+			transform: perspective(1000px) translateY(0px) rotate3d(0, 1, 0, 0deg) scale(1);
+		}
+	}
+
+	.pseudo-active {
+
+		.slide-animation {
+		    opacity: 1;
+		    transition: none;
+		    transform: none;
+		}		
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"header": "split",
+	"primary-color": "#edc5c7",
+	"right_column_width": "280",
+	"logo_img_width": "180",
+	"header_full_width": "1",
+	"top-bar": false,
+	"header-border": false,
+	"primary-font": {
+		"font-family": "Sumana",
+		"google": true
+	}
+}

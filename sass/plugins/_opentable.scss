@@ -1,0 +1,144 @@
+
+// --------------------------------------------------------------------------------------------
+// OPENTABLE
+// --------------------------------------------------------------------------------------------
+
+.powered-by-open-table {
+	display: none;
+}
+
+.otw-widget-form-wrap {
+
+	.otw-wrapper {
+
+		label {
+		    font-size: 14px;
+			line-height: 20px;
+		    margin-bottom: 1px; 
+		}
+
+		.otw-input-wrap {
+			margin-bottom: 20px;
+		}
+
+		.selectric,
+		input[type="text"] {
+			height: 40px;
+			background-color: transparent;
+		}
+	
+		.selectric {
+	
+			p {
+				line-height: 40px;
+				height: 40px;
+			}
+		}
+
+		.button {
+			background-color: transparent;
+			border-color: transparent;
+			padding: 0;
+			border: none;
+		}
+
+		.label {
+			font-size: 14px;
+		}
+	
+		.otw-button-wrap {
+			margin-top: 25px;
+		}
+	}
+
+	.otw-pre-form-content {
+		
+		p {
+			margin-bottom: 15px;
+		}
+	}
+
+	.otw-post-form-content {
+		margin-top: 15px;
+	}
+
+	.color-scheme-light & {
+
+		.otw-wrapper {
+
+			.selectric-scroll {
+				
+				ul {
+
+					li {
+						color: black;
+					}
+				}
+			}
+		}
+	}
+}
+
+.otw-bare-bones {
+
+	.color-scheme-light & {
+
+		.otw-wrapper {
+
+			.selectric,
+			input[type="text"] {
+				border-color: rgba(255, 255, 255, .4);
+			}
+
+			.label {
+				color: white;
+			}
+		}
+
+		.otw-pre-form-content,
+		.otw-post-form-content {
+
+			p {
+				color: rgba(255,255,255,.8);
+			}
+		}
+	}
+}
+
+.otw-minimal-light,
+.otw-shadow-light {
+
+	.otw-wrapper {
+
+		label,
+		input[type="text"] {
+			color: black;
+		}
+	}
+
+}
+
+.otw-minimal-dark,
+.otw-shadow-dark {
+
+	.otw-wrapper {
+
+		.selectric,
+		input[type="text"] {
+			border-color: rgba(255, 255, 255, .4);
+		}
+		
+		label,
+		.label {
+			color: white;
+		}
+	}
+
+	.otw-pre-form-content,
+	.otw-post-form-content {
+
+		p {
+			color: rgba(255,255,255,.8);
+		}
+	}
+}
